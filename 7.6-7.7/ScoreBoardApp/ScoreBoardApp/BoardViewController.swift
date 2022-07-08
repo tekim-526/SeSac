@@ -72,7 +72,7 @@ final class BoardViewController: UIViewController {
         view.endEditing(true)
         // 키보드 내리기-2
         inputTextField.resignFirstResponder()
-        
+        // 뷰 숨기기
         editView.isHidden.toggle()
         
         
