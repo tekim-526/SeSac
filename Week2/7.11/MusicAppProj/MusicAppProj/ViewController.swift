@@ -9,11 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  
+    
+    @IBOutlet var imageList: [UIImageView]!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("viewDidLoad")
+        makeUI()
     }
-
+    func makeUI() {
+        for image in imageList {
+            image.layer.cornerRadius = 4.5
+        }
+    }
 
 }
 
