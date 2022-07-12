@@ -6,6 +6,13 @@
 //
 
 import UIKit
+enum CoinedWord: String {
+    case first = "어쩌라고 티비나봐"
+    case second = "무슨일이니?"
+    case third = "점심메뉴 추천좀"
+    case fourth = "제목이 곧 내용"
+    case fifth = "비쥬얼 담당"
+}
 
 class ViewController: UIViewController {
     
@@ -13,16 +20,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var mainTextField: UITextField!
     
-    let coinedWord: [(String, String)] = [("어쩔티비", "어쩌라고 티비나봐"), ("머선129", "무슨일이니?"), ("점메추","점심메뉴 추천좀"), ("제곧내","제목이 곧 내용"), ("비담","비쥬얼 담당")]
+    let coinedWord: [String] = ["어쩔티비", "머선129", "점메추", "제곧내", "비담"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         makeUI()
     }
     
     func makeUI() {
         for keywordButton in keywordButtonList {
-            keywordButton.setTitle(coinedWord.randomElement()?.0, for: .normal)
+            keywordButton.setTitle(coinedWord.randomElement(), for: .normal)
             keywordButton.layer.cornerRadius = 5
             keywordButton.layer.borderWidth = 1.5
             keywordButton.layer.borderColor = CGColor.init(red: 0, green: 0, blue: 0, alpha: 1)
@@ -34,20 +42,17 @@ class ViewController: UIViewController {
     }
     
     func actionOfButtonAndReturn() {
-        if mainTextField.text == coinedWord[0].0 {
-            resultLabel.text = coinedWord[0].1
-            resultLabel.textColor = .black
-        } else if mainTextField.text == coinedWord[1].0{
-            resultLabel.text = coinedWord[1].1
-            resultLabel.textColor = .black
-        } else if mainTextField.text == coinedWord[2].0 {
-            resultLabel.text = coinedWord[2].1
-            resultLabel.textColor = .black
-        } else if mainTextField.text == coinedWord[3].0 {
-            resultLabel.text = coinedWord[3].1
-            resultLabel.textColor = .black
-        } else if mainTextField.text == coinedWord[4].0 {
-            resultLabel.text = coinedWord[4].1
+        resultLabel.textColor = .black
+        if mainTextField.text == coinedWord[0] {
+            resultLabel.text = CoinedWord.first.rawValue
+        } else if mainTextField.text == coinedWord[1]{
+            resultLabel.text = CoinedWord.second.rawValue
+        } else if mainTextField.text == coinedWord[2] {
+            resultLabel.text = CoinedWord.third.rawValue
+        } else if mainTextField.text == coinedWord[3] {
+            resultLabel.text = CoinedWord.fourth.rawValue
+        } else if mainTextField.text == coinedWord[4] {
+            resultLabel.text = CoinedWord.fifth.rawValue
         } else {
             resultLabel.textColor = .red
             resultLabel.text = "유효하지 않은 값 입니다. 다른 값을 넣어주세요"
@@ -57,7 +62,7 @@ class ViewController: UIViewController {
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         actionOfButtonAndReturn()
         for keywordButton in keywordButtonList {
-            keywordButton.setTitle(coinedWord.randomElement()?.0, for: .normal)
+            keywordButton.setTitle(coinedWord.randomElement(), for: .normal)
         }
     }
     
@@ -65,7 +70,7 @@ class ViewController: UIViewController {
     @IBAction func returnKeyActivated(_ sender: UITextField) {
         actionOfButtonAndReturn()
         for keywordButton in keywordButtonList {
-            keywordButton.setTitle(coinedWord.randomElement()?.0, for: .normal)
+            keywordButton.setTitle(coinedWord.randomElement(), for: .normal)
         }
     }
 }

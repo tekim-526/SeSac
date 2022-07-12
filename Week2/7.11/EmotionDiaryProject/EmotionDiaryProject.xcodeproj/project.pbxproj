@@ -13,6 +13,7 @@
 		932097DD287BEBC50075FCC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 932097DB287BEBC50075FCC1 /* Main.storyboard */; };
 		932097DF287BEBC70075FCC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932097DE287BEBC70075FCC1 /* Assets.xcassets */; };
 		932097E2287BEBC70075FCC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 932097E0287BEBC70075FCC1 /* LaunchScreen.storyboard */; };
+		9343DAE1287D21D600ED021E /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9343DAE0287D21D600ED021E /* SegmentedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		932097DE287BEBC70075FCC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		932097E1287BEBC70075FCC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		932097E3287BEBC70075FCC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9343DAE0287D21D600ED021E /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				932097D5287BEBC50075FCC1 /* AppDelegate.swift */,
 				932097D7287BEBC50075FCC1 /* SceneDelegate.swift */,
 				932097D9287BEBC50075FCC1 /* ViewController.swift */,
+				9343DAE0287D21D600ED021E /* SegmentedViewController.swift */,
 				932097DB287BEBC50075FCC1 /* Main.storyboard */,
 				932097DE287BEBC70075FCC1 /* Assets.xcassets */,
 				932097E0287BEBC70075FCC1 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				932097DA287BEBC50075FCC1 /* ViewController.swift in Sources */,
 				932097D6287BEBC50075FCC1 /* AppDelegate.swift in Sources */,
 				932097D8287BEBC50075FCC1 /* SceneDelegate.swift in Sources */,
+				9343DAE1287D21D600ED021E /* SegmentedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

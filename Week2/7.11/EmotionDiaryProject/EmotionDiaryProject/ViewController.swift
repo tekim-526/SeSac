@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setLabel()
     }
+    
     func setLabel() {
         label1.text = "\(nums[0])"
         label2.text = "\(nums[1])"
@@ -36,48 +37,50 @@ class ViewController: UIViewController {
         label9.text = "\(nums[8])"
     }
     
-    @IBAction func btn1Tapped(_ sender: UIButton) {
-        nums[0] += 1
-        label1.text = "\(nums[0])"
-    }
-    @IBAction func btn2Tapped(_ sender: UIButton) {
-        nums[1] += 1
-        label2.text = "\(nums[1])"
-    }
-    @IBAction func btn3Tapped(_ sender: UIButton) {
-        nums[2] += 1
-        label3.text = "\(nums[2])"
-    }
-    @IBAction func btn4Tapped(_ sender: UIButton) {
-        nums[3] += 1
-        label4.text = "\(nums[3])"
-    }
-    @IBAction func btn5Tapped(_ sender: UIButton) {
-        nums[4] += 1
-        label5.text = "\(nums[4])"
-    }
-    @IBAction func btn6Tapped(_ sender: UIButton) {
-        nums[5] += 1
-        label6.text = "\(nums[5])"
-    }
-    @IBAction func btn7Tapped(_ sender: UIButton) {
-        nums[6] += 1
-        label7.text = "\(nums[6])"
-    }
-    @IBAction func btn8Tapped(_ sender: UIButton) {
-        nums[7] += 1
-        label8.text = "\(nums[7])"
-    }
-    @IBAction func btn9Tapped(_ sender: UIButton) {
-        nums[8] += 1
-        label9.text = "\(nums[8])"
+    // tag를 활용해서 리팩토링 해보자
+    @IBAction func buttonAction(_ sender: UIButton) {
+        switch sender.tag {
+        case 0: nums[0] += 1
+        case 1: nums[1] += 1
+        case 2: nums[2] += 1
+        case 3: nums[3] += 1
+        case 4: nums[4] += 1
+        case 5: nums[5] += 1
+        case 6: nums[6] += 1
+        case 7: nums[7] += 1
+        case 8: nums[8] += 1
+        default:
+            nums = Array(repeating: 0, count: 9)
+            setLabel()
+        }
+        setLabel()
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         nums = Array(repeating: 0, count: 9)
         setLabel()
+        showAlertController()
     }
     
-    
+    //Alert
+    func showAlertController() {
+        // 1.흰 바탕: UIAlertController
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        // 2.버튼
+        let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)
+        let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+        let web = UIAlertAction(title: "web", style: .default)
+        let copy = UIAlertAction(title: "copy", style: .default)
+        
+        // 3. 1+2
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        alert.addAction(web)
+        alert.addAction(copy)
+        
+        // 4. present
+        present(alert, animated: true)
+    }
 }
 
