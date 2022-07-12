@@ -43,21 +43,33 @@
                                 <rect key="frame" x="32" y="128" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tagButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4mw-JT-IOX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VG-Rg-Z5q">
                                 <rect key="frame" x="107" y="128" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tagButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z8i-eY-5Gu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S8-tp-cGB">
                                 <rect key="frame" x="182" y="128" width="104" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="wqeqweqwe"/>
+                                <connections>
+                                    <action selector="tagButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYX-7i-Idp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h1-dT-Lvh">
                                 <rect key="frame" x="294" y="128" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tagButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L9y-pr-kmk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7x-TM-xks">
                                 <rect key="frame" x="30" y="299" width="354" height="88"/>
