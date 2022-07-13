@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     //Alert
     func showAlertController() {
         // 1.흰 바탕: UIAlertController
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
         
         // 2.버튼
         let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)

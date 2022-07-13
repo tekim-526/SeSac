@@ -336,7 +336,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="새 맞춤 동영상"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
@@ -656,6 +656,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="shadowButton" destination="Bgz-jd-Xug" id="Hsr-Nc-OGL"/>
                         <outletCollection property="imageList" destination="y3K-lh-NOt" collectionClass="NSMutableArray" id="XI0-Yh-T7V"/>
                         <outletCollection property="imageList" destination="pk0-CZ-iuV" collectionClass="NSMutableArray" id="j7x-pE-g0x"/>
                         <outletCollection property="imageList" destination="lYF-Xp-yOq" collectionClass="NSMutableArray" id="t4j-tL-gI3"/>

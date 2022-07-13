@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
   
-    
+    @IBOutlet weak var shadowButton: UIButton!
     @IBOutlet var imageList: [UIImageView]!
 
     override func viewDidLoad() {
@@ -32,6 +32,10 @@ class ViewController: UIViewController {
         for image in imageList {
             image.layer.cornerRadius = 4.5
         }
+        shadowButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        shadowButton.layer.shadowColor = UIColor.white.cgColor
+        shadowButton.layer.shadowOpacity = 1
+        shadowButton.layer.shadowRadius = 1
     }
 
 }
