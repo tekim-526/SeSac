@@ -18,6 +18,8 @@ class SecondViewController: UIViewController {
         datePickerView.locale = Locale(identifier: "ko_KR")
         for image in imageViewCollection {
             // MARK: - label에는 opacity를 안주는 방법이 뭘까..?
+            // 해결 - 그냥 글자가 흰색이라 같이 투명해지는 것 처럼 보인것이었다,,
+            image.layer.opacity = 0.8
         }
         labelSetting(labelCollection: labelCollection, date: Date())
     }
@@ -36,6 +38,7 @@ class SecondViewController: UIViewController {
     func labelSetting(labelCollection: [UILabel]!, date: Date) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년\nMM월 dd일"
+        formatter.locale = Locale(identifier: "ko_KR")
         for label in labelCollection {
             switch label.tag {
             case 1:

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d0K-n1-5bF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="입력해라" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T74-VM-g1L" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="138" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5Ha-nw-PjH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" systemColor="systemMintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siF-HO-QGI" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="208" width="374" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="LpP-Y4-UqR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMb-bC-tkf">
+                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="ORU-M0-FXa" kind="show" id="0uE-on-N3F"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-Q1-Vm6" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="663.5" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Fak-Kb-4PW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T74-VM-g1L" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="2vu-eh-xuL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="T74-VM-g1L" secondAttribute="trailing" constant="20" id="3WX-Bo-sJQ"/>
+                            <constraint firstItem="pMb-bC-tkf" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Ggn-63-HaA"/>
+                            <constraint firstItem="siF-HO-QGI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="QYD-Z2-SU9"/>
+                            <constraint firstItem="pMb-bC-tkf" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fDQ-lc-8ol"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yaF-Q1-Vm6" secondAttribute="trailing" constant="20" id="gro-PU-Biu"/>
+                            <constraint firstItem="yaF-Q1-Vm6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="j1k-CQ-CSU"/>
+                            <constraint firstItem="T74-VM-g1L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="nfM-1e-dfv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="siF-HO-QGI" secondAttribute="trailing" constant="20" id="pwD-ci-a3V"/>
+                            <constraint firstItem="yaF-Q1-Vm6" firstAttribute="top" secondItem="pMb-bC-tkf" secondAttribute="bottom" constant="200" id="rbK-1R-v4N"/>
+                            <constraint firstItem="siF-HO-QGI" firstAttribute="top" secondItem="T74-VM-g1L" secondAttribute="bottom" constant="20" id="tx1-Ey-mPn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5gu-1s-0Aq">
+                        <barButtonItem key="leftBarButtonItem" title="item" image="list.dash" catalog="system" id="mtm-1k-Qor">
+                            <connections>
+                                <segue destination="ORU-M0-FXa" kind="presentation" id="VkQ-Xm-qg8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="D6T-jx-igc">
+            <objects>
+                <viewController id="XXo-NG-Zl3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XrV-Um-7as">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SLF-Ag-WjK"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TJU-IJ-028"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7e-L8-HfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2682.608695652174" y="77.678571428571431"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="yK5-Ye-7b6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ORU-M0-FXa" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Jax-jy-AyD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A28-2G-ZPJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="XXo-NG-Zl3" kind="relationship" relationship="rootViewController" id="YHd-uf-QAk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIk-3i-2gP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842.0289855072465" y="77.678571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4rQ-nf-cXZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d0K-n1-5bF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GuZ-TB-1FU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="QVg-WK-O6W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uho-WV-c6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="T74-VM-g1L">
+            <size key="intrinsicContentSize" width="48.5" height="18.5"/>
+        </designable>
+    </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="0uE-on-N3F"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
