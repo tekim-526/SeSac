@@ -21,6 +21,9 @@
 		937AECC1287FAF3C00157C0E /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 937AECC0287FAF3C00157C0E /* FSCalendar */; };
 		937AECC4287FAFD900157C0E /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 937AECC3287FAFD900157C0E /* TextFieldEffects */; };
 		937AECC7287FBE4D00157C0E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 937AECC6287FBE4D00157C0E /* IQKeyboardManagerSwift */; };
+		937AECCB2880E84000157C0E /* Transition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937AECCA2880E84000157C0E /* Transition.storyboard */; };
+		937AECCD2880EFC300157C0E /* TransitionFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937AECCC2880EFC300157C0E /* TransitionFirstViewController.swift */; };
+		937AECCF2880FE0E00157C0E /* TransitionSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937AECCE2880FE0E00157C0E /* TransitionSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +38,10 @@
 		9343DAE0287D21D600ED021E /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 		937AECB6287E83E900157C0E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		937AECB8287FA68D00157C0E /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
-		937AECBA287FA82A00157C0E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Search.storyboard; path = "New Group/Search.storyboard"; sourceTree = "<group>"; };
+		937AECBA287FA82A00157C0E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		937AECCA2880E84000157C0E /* Transition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transition.storyboard; sourceTree = "<group>"; };
+		937AECCC2880EFC300157C0E /* TransitionFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionFirstViewController.swift; sourceTree = "<group>"; };
+		937AECCE2880FE0E00157C0E /* TransitionSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionSecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,19 +78,38 @@
 		932097D4287BEBC50075FCC1 /* EmotionDiaryProject */ = {
 			isa = PBXGroup;
 			children = (
+				937AECC92880E82700157C0E /* Transition */,
+				937AECC82880E81500157C0E /* New Group1 */,
 				932097D5287BEBC50075FCC1 /* AppDelegate.swift */,
-				937AECBA287FA82A00157C0E /* Search.storyboard */,
 				932097D7287BEBC50075FCC1 /* SceneDelegate.swift */,
 				932097D9287BEBC50075FCC1 /* ViewController.swift */,
 				9343DAE0287D21D600ED021E /* SegmentedViewController.swift */,
-				932097DB287BEBC50075FCC1 /* Main.storyboard */,
-				937AECB8287FA68D00157C0E /* Setting.storyboard */,
 				937AECB6287E83E900157C0E /* SecondViewController.swift */,
 				932097DE287BEBC70075FCC1 /* Assets.xcassets */,
 				932097E0287BEBC70075FCC1 /* LaunchScreen.storyboard */,
 				932097E3287BEBC70075FCC1 /* Info.plist */,
 			);
 			path = EmotionDiaryProject;
+			sourceTree = "<group>";
+		};
+		937AECC82880E81500157C0E /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				937AECBA287FA82A00157C0E /* Search.storyboard */,
+				932097DB287BEBC50075FCC1 /* Main.storyboard */,
+				937AECB8287FA68D00157C0E /* Setting.storyboard */,
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		937AECC92880E82700157C0E /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				937AECCA2880E84000157C0E /* Transition.storyboard */,
+				937AECCC2880EFC300157C0E /* TransitionFirstViewController.swift */,
+				937AECCE2880FE0E00157C0E /* TransitionSecondViewController.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				932097E2287BEBC70075FCC1 /* LaunchScreen.storyboard in Resources */,
+				937AECCB2880E84000157C0E /* Transition.storyboard in Resources */,
 				932097DF287BEBC70075FCC1 /* Assets.xcassets in Resources */,
 				932097DD287BEBC50075FCC1 /* Main.storyboard in Resources */,
 				937AECB9287FA68D00157C0E /* Setting.storyboard in Resources */,
@@ -174,8 +200,10 @@
 			files = (
 				932097DA287BEBC50075FCC1 /* ViewController.swift in Sources */,
 				932097D6287BEBC50075FCC1 /* AppDelegate.swift in Sources */,
+				937AECCD2880EFC300157C0E /* TransitionFirstViewController.swift in Sources */,
 				932097D8287BEBC50075FCC1 /* SceneDelegate.swift in Sources */,
 				937AECB7287E83E900157C0E /* SecondViewController.swift in Sources */,
+				937AECCF2880FE0E00157C0E /* TransitionSecondViewController.swift in Sources */,
 				9343DAE1287D21D600ED021E /* SegmentedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +355,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmotionDiaryProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Transition;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -356,7 +384,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmotionDiaryProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Transition;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

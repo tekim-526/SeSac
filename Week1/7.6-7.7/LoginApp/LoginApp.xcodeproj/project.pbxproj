@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		937AECD1288133C000157C0E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937AECD0288133C000157C0E /* SecondViewController.swift */; };
+		937AECDB2881352100157C0E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 937AECDA2881352100157C0E /* IQKeyboardManagerSwift */; };
+		937AECDE2881371D00157C0E /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 937AECDD2881371D00157C0E /* TextFieldEffects */; };
 		93DDDECB28755DEB005C26B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDDECA28755DEB005C26B1 /* AppDelegate.swift */; };
 		93DDDECD28755DEB005C26B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDDECC28755DEB005C26B1 /* SceneDelegate.swift */; };
 		93DDDECF28755DEB005C26B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DDDECE28755DEB005C26B1 /* ViewController.swift */; };
@@ -16,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		937AECD0288133C000157C0E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		93DDDEC728755DEB005C26B1 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DDDECA28755DEB005C26B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93DDDECC28755DEB005C26B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937AECDB2881352100157C0E /* IQKeyboardManagerSwift in Frameworks */,
+				937AECDE2881371D00157C0E /* TextFieldEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,7 @@
 				93DDDECC28755DEB005C26B1 /* SceneDelegate.swift */,
 				93DDDECE28755DEB005C26B1 /* ViewController.swift */,
 				93DDDED028755DEB005C26B1 /* Main.storyboard */,
+				937AECD0288133C000157C0E /* SecondViewController.swift */,
 				93DDDED328755DEC005C26B1 /* Assets.xcassets */,
 				93DDDED528755DEC005C26B1 /* LaunchScreen.storyboard */,
 				93DDDED828755DEC005C26B1 /* Info.plist */,
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = LoginApp;
+			packageProductDependencies = (
+				937AECDA2881352100157C0E /* IQKeyboardManagerSwift */,
+				937AECDD2881371D00157C0E /* TextFieldEffects */,
+			);
 			productName = LoginApp;
 			productReference = 93DDDEC728755DEB005C26B1 /* LoginApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,10 @@
 				Base,
 			);
 			mainGroup = 93DDDEBE28755DEB005C26B1;
+			packageReferences = (
+				937AECD92881352100157C0E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				937AECDC2881371C00157C0E /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = 93DDDEC828755DEB005C26B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937AECD1288133C000157C0E /* SecondViewController.swift in Sources */,
 				93DDDECF28755DEB005C26B1 /* ViewController.swift in Sources */,
 				93DDDECB28755DEB005C26B1 /* AppDelegate.swift in Sources */,
 				93DDDECD28755DEB005C26B1 /* SceneDelegate.swift in Sources */,
@@ -304,7 +320,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +374,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		937AECD92881352100157C0E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+		937AECDC2881371C00157C0E /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		937AECDA2881352100157C0E /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 937AECD92881352100157C0E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		937AECDD2881371D00157C0E /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 937AECDC2881371C00157C0E /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93DDDEBF28755DEB005C26B1 /* Project object */;
 }

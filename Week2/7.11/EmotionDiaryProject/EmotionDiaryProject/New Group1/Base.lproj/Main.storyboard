@@ -273,6 +273,20 @@
                                     <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kHu-TA-knM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zn5-fM-RqI">
+                                <rect key="frame" x="30" y="729.5" width="85" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="감정올리기"/>
+                                <connections>
+                                    <action selector="upButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ms-Q0-eZ8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDh-qi-Sml">
+                                <rect key="frame" x="307.5" y="729.5" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -285,10 +299,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DhW-na-kHD" secondAttribute="trailing" constant="30" id="CgP-LZ-vt0"/>
                             <constraint firstItem="MaL-96-nam" firstAttribute="top" secondItem="DhW-na-kHD" secondAttribute="bottom" constant="16" id="EIW-0e-sFP"/>
                             <constraint firstItem="5Tj-RF-HGE" firstAttribute="bottom" secondItem="SaL-xS-CQW" secondAttribute="bottom" id="EYt-R4-iQm"/>
+                            <constraint firstItem="VDh-qi-Sml" firstAttribute="top" secondItem="DhW-na-kHD" secondAttribute="bottom" constant="16" id="IaB-aa-rBb"/>
                             <constraint firstItem="R7b-3D-OgW" firstAttribute="bottom" secondItem="p74-zl-aSo" secondAttribute="bottom" id="Ilc-gi-dUA"/>
+                            <constraint firstItem="VDh-qi-Sml" firstAttribute="centerX" secondItem="5Tj-RF-HGE" secondAttribute="centerX" id="Jdh-mQ-eaG"/>
                             <constraint firstItem="stR-m8-UTl" firstAttribute="bottom" secondItem="oiU-fE-HmF" secondAttribute="bottom" id="M60-rz-iz7"/>
                             <constraint firstItem="bD4-tr-ca7" firstAttribute="trailing" secondItem="IhI-PD-cM4" secondAttribute="trailing" id="OOw-NJ-59X"/>
                             <constraint firstItem="7fC-CO-tSe" firstAttribute="leading" secondItem="v19-dc-rc5" secondAttribute="leading" id="P6u-3w-ApQ"/>
+                            <constraint firstItem="Zn5-fM-RqI" firstAttribute="top" secondItem="DhW-na-kHD" secondAttribute="bottom" constant="16" id="Vvv-QF-GoP"/>
                             <constraint firstItem="oak-cN-ipO" firstAttribute="bottom" secondItem="sRc-QB-V9M" secondAttribute="bottom" id="aor-lH-KJK"/>
                             <constraint firstItem="5Tj-RF-HGE" firstAttribute="leading" secondItem="SaL-xS-CQW" secondAttribute="leading" id="b3W-c5-fZ9"/>
                             <constraint firstItem="0in-Nx-Wh8" firstAttribute="top" secondItem="7DY-xm-l4O" secondAttribute="top" id="cbQ-fc-zSU"/>
@@ -318,6 +335,7 @@
                             <constraint firstItem="MaL-96-nam" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xK6-Bg-ACf"/>
                             <constraint firstItem="5Tj-RF-HGE" firstAttribute="top" secondItem="SaL-xS-CQW" secondAttribute="top" id="yix-sj-pFQ"/>
                             <constraint firstItem="DhW-na-kHD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yqE-ez-VDL"/>
+                            <constraint firstItem="Zn5-fM-RqI" firstAttribute="leading" secondItem="2hO-z2-bDQ" secondAttribute="leading" id="zCL-Lh-CQu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="감정 다이어리" id="N3n-4u-tKg">
@@ -337,6 +355,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emotionCountLabel" destination="VDh-qi-Sml" id="MEQ-S7-rct"/>
                         <outlet property="label1" destination="7eK-eU-r96" id="WEJ-9A-Wmf"/>
                         <outlet property="label2" destination="cwc-wY-xGw" id="Rh2-CJ-3p8"/>
                         <outlet property="label3" destination="E0z-IV-jgT" id="0Dz-9u-GLd"/>

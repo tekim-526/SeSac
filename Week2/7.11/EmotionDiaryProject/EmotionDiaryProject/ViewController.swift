@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+enum UserDefaultsKey: String {
+    case num
+}
 class ViewController: UIViewController {
     var nums = Array(repeating: 0, count: 9)
     
@@ -20,9 +22,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var label8: UILabel!
     @IBOutlet weak var label9: UILabel!
     
+    @IBOutlet weak var emotionCountLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setLabel()
+        
+        emotionCountLabel.text = "\(UserDefaults.standard.integer(forKey: UserDefaultsKey.num.rawValue))"
     }
     
     func setLabel() {
@@ -58,8 +64,27 @@ class ViewController: UIViewController {
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         nums = Array(repeating: 0, count: 9)
+        UserDefaults.standard.set(0, forKey: UserDefaultsKey.num.rawValue)
+        emotionCountLabel.text = "\(UserDefaults.standard.integer(forKey: UserDefaultsKey.num.rawValue))"
+        // 제거
+        // UserDefaults.standard.removeObject(forKey: UserDefaultsKey.num.rawValue)
+        // 전체제거
+        //for key in UserDefaults.standard.dictionaryRepresentation().keys {
+        //    UserDefaults.standard.removeObject(forKey: key.description)
+        //}
         setLabel()
         showAlertController()
+    }
+    
+    @IBAction func upButtonTapped(_ sender: UIButton) {
+        // 기존 데이터값 가져오기
+        let currentValue = UserDefaults.standard.integer(forKey: UserDefaultsKey.num.rawValue)
+        // 감정 + 1
+        let updateValue = currentValue + 1
+        // 새로운 값 저장
+        UserDefaults.standard.set(updateValue, forKey: UserDefaultsKey.num.rawValue)
+        // 레이블에 새로운 내용 보여주기
+        emotionCountLabel.text = "\(updateValue)"
     }
     
     //Alert
