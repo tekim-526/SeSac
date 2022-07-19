@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1nI-mP-JY1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--쇼핑-->
+        <scene sceneID="Vfv-wu-iCN">
+            <objects>
+                <tableViewController id="ULo-Vp-3i5" customClass="ShoppingTableViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="RQr-WD-IDk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="c6w-Jc-X5h">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y2H-Ha-JFG">
+                                    <rect key="frame" x="20" y="16.5" width="374" height="50"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="무엇을 구매하실 건가요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JkA-R3-FT6">
+                                            <rect key="frame" x="0.0" y="0.0" width="302" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="shoppingTextFieldAction:" destination="ULo-Vp-3i5" eventType="editingDidEndOnExit" id="LRZ-iX-Jrw"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpu-gC-uFf">
+                                            <rect key="frame" x="314" y="0.0" width="60" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="gpu-gC-uFf" secondAttribute="height" multiplier="30:25" id="ZZm-p3-Dd4"/>
+                                            </constraints>
+                                            <color key="tintColor" red="0.0041035353539999996" green="0.0041035353539999996" blue="0.0041035353539999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="추가"/>
+                                            <connections>
+                                                <action selector="addButtonTapped:" destination="ULo-Vp-3i5" eventType="touchUpInside" id="4yd-W0-nKa"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="lJB-lJ-ORV"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="JkA-R3-FT6" firstAttribute="centerY" secondItem="c6w-Jc-X5h" secondAttribute="centerY" id="3XT-e4-jdV"/>
+                                <constraint firstAttribute="trailing" secondItem="Y2H-Ha-JFG" secondAttribute="trailing" constant="20" id="cYd-HZ-ivr"/>
+                                <constraint firstItem="Y2H-Ha-JFG" firstAttribute="leading" secondItem="c6w-Jc-X5h" secondAttribute="leading" constant="20" id="p5X-v8-b0x"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingTableViewCell" rowHeight="67" id="Yav-aK-CPw" customClass="ShoppingTableViewCell" customModule="TrendMedia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="127.5" width="414" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yav-aK-CPw" id="ndm-vq-9Ka">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="67"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYt-jY-n4b">
+                                            <rect key="frame" x="358" y="15.5" width="36" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="36" id="79c-as-Z3m"/>
+                                                <constraint firstAttribute="width" secondItem="EYt-jY-n4b" secondAttribute="height" id="OSV-Lp-5AU"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="star" catalog="system" title=""/>
+                                            <connections>
+                                                <action selector="starButtonTapped:" destination="Yav-aK-CPw" eventType="touchUpInside" id="eWq-7e-Rtp"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyD-4j-PG5">
+                                            <rect key="frame" x="76" y="15.5" width="262" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="36" id="ty4-3V-VVu"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8m-Wq-8pH">
+                                            <rect key="frame" x="20" y="15.5" width="36" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="L8m-Wq-8pH" secondAttribute="height" id="SfP-iV-BZD"/>
+                                                <constraint firstAttribute="height" constant="36" id="UPG-Eu-jA8"/>
+                                            </constraints>
+                                            <color key="tintColor" red="0.0041035353539999996" green="0.0041035353539999996" blue="0.0041035353539999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
+                                            <connections>
+                                                <action selector="checkListButtonTapped:" destination="Yav-aK-CPw" eventType="touchUpInside" id="Wys-a0-feA"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="EYt-jY-n4b" firstAttribute="leading" secondItem="eyD-4j-PG5" secondAttribute="trailing" constant="20" id="Cwt-VV-33h"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="EYt-jY-n4b" secondAttribute="trailing" id="IBJ-sh-R16"/>
+                                        <constraint firstItem="L8m-Wq-8pH" firstAttribute="centerY" secondItem="ndm-vq-9Ka" secondAttribute="centerY" id="RrL-xf-Ma3"/>
+                                        <constraint firstItem="eyD-4j-PG5" firstAttribute="centerY" secondItem="ndm-vq-9Ka" secondAttribute="centerY" id="V0c-u4-iBC"/>
+                                        <constraint firstItem="L8m-Wq-8pH" firstAttribute="leading" secondItem="ndm-vq-9Ka" secondAttribute="leadingMargin" id="atD-sm-9xj"/>
+                                        <constraint firstItem="eyD-4j-PG5" firstAttribute="leading" secondItem="L8m-Wq-8pH" secondAttribute="trailing" constant="20" id="xZL-IN-Poc"/>
+                                        <constraint firstItem="EYt-jY-n4b" firstAttribute="centerY" secondItem="ndm-vq-9Ka" secondAttribute="centerY" id="yWu-1l-rcL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkBoxButton" destination="L8m-Wq-8pH" id="Of8-AF-hco"/>
+                                    <outlet property="checkListLabel" destination="eyD-4j-PG5" id="F1W-Bi-SDa"/>
+                                    <outlet property="starButton" destination="EYt-jY-n4b" id="C5s-xj-2lV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ULo-Vp-3i5" id="HFm-iB-Puw"/>
+                            <outlet property="delegate" destination="ULo-Vp-3i5" id="Lxh-5p-gad"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="쇼핑" id="sxM-he-d35"/>
+                    <connections>
+                        <outlet property="addButton" destination="gpu-gC-uFf" id="z9Y-UA-sln"/>
+                        <outlet property="shoppingTextField" destination="JkA-R3-FT6" id="iX9-wo-ADM"/>
+                        <outlet property="tableHeaderView" destination="c6w-Jc-X5h" id="Ora-bn-e8G"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fc-Uj-vWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="547.82608695652175" y="-38.169642857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TKi-1y-Zuo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1nI-mP-JY1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D2z-th-r6W">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ULo-Vp-3i5" kind="relationship" relationship="rootViewController" id="jl7-NO-atL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yS-SB-A5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362.31884057971018" y="-38.169642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

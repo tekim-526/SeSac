@@ -7,15 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		935588752886720300EE480B /* Shopping.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935588742886720300EE480B /* Shopping.storyboard */; };
+		935588772886729C00EE480B /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935588762886729C00EE480B /* ShoppingTableViewController.swift */; };
+		935588792886768000EE480B /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935588782886768000EE480B /* ShoppingTableViewCell.swift */; };
+		9355887B28867BB400EE480B /* TrendSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9355887A28867BB400EE480B /* TrendSearchTableViewController.swift */; };
+		9355887D28867D8C00EE480B /* TrendSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9355887C28867D8C00EE480B /* TrendSearchTableViewCell.swift */; };
+		937114172884FEE6003B2A74 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937114162884FEE6003B2A74 /* SettingTableViewController.swift */; };
+		937A697E28853D6D00440312 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937A697D28853D6C00440312 /* Setting.storyboard */; };
+		937A698028853DC500440312 /* KakaoSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937A697F28853DC500440312 /* KakaoSettingTableViewController.swift */; };
+		937A69822886401400440312 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937A69812886401400440312 /* Search.storyboard */; };
+		937A69842886404800440312 /* Trend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937A69832886404800440312 /* Trend.storyboard */; };
+		937A69862886407B00440312 /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937A69852886407B00440312 /* Intro.storyboard */; };
+		93A4EC1B288643FC00432819 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4EC1A288643FC00432819 /* TrendViewController.swift */; };
+		93A4EC1D2886440D00432819 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4EC1C2886440D00432819 /* SearchViewController.swift */; };
+		93A4EC1F2886451A00432819 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4EC1E2886451A00432819 /* UIViewController+Extension.swift */; };
+		93A4EC212886478B00432819 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4EC202886478B00432819 /* UITextField+Extension.swift */; };
+		93A4EC4B28864B9700432819 /* BucketListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4EC4A28864B9700432819 /* BucketListTableViewController.swift */; };
+		93A4EC4D28864DA300432819 /* BucketListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A4EC4C28864DA300432819 /* BucketListTableViewCell.swift */; };
 		93D5F4762884DDC100EA589C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D5F4752884DDC100EA589C /* AppDelegate.swift */; };
 		93D5F4782884DDC100EA589C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D5F4772884DDC100EA589C /* SceneDelegate.swift */; };
 		93D5F47A2884DDC100EA589C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D5F4792884DDC100EA589C /* ViewController.swift */; };
 		93D5F47D2884DDC100EA589C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D5F47B2884DDC100EA589C /* Main.storyboard */; };
 		93D5F47F2884DDC300EA589C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D5F47E2884DDC300EA589C /* Assets.xcassets */; };
 		93D5F4822884DDC300EA589C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D5F4802884DDC300EA589C /* LaunchScreen.storyboard */; };
+		93D5F48A2884F24200EA589C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D5F4892884F24200EA589C /* Home.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		935588742886720300EE480B /* Shopping.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shopping.storyboard; sourceTree = "<group>"; };
+		935588762886729C00EE480B /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoppingTableViewController.swift; path = StoryBoard/ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		935588782886768000EE480B /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
+		9355887A28867BB400EE480B /* TrendSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrendSearchTableViewController.swift; path = StoryBoard/TrendSearchTableViewController.swift; sourceTree = "<group>"; };
+		9355887C28867D8C00EE480B /* TrendSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrendSearchTableViewCell.swift; path = StoryBoard/TrendSearchTableViewCell.swift; sourceTree = "<group>"; };
+		937114162884FEE6003B2A74 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		937A697D28853D6C00440312 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		937A697F28853DC500440312 /* KakaoSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSettingTableViewController.swift; sourceTree = "<group>"; };
+		937A69812886401400440312 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		937A69832886404800440312 /* Trend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trend.storyboard; sourceTree = "<group>"; };
+		937A69852886407B00440312 /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		93A4EC1A288643FC00432819 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
+		93A4EC1C2886440D00432819 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		93A4EC1E2886451A00432819 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		93A4EC202886478B00432819 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		93A4EC4A28864B9700432819 /* BucketListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListTableViewController.swift; sourceTree = "<group>"; };
+		93A4EC4C28864DA300432819 /* BucketListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BucketListTableViewCell.swift; path = StoryBoard/BucketListTableViewCell.swift; sourceTree = "<group>"; };
 		93D5F4722884DDC100EA589C /* TrendMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D5F4752884DDC100EA589C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D5F4772884DDC100EA589C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +59,7 @@
 		93D5F47E2884DDC300EA589C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93D5F4812884DDC300EA589C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93D5F4832884DDC300EA589C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93D5F4892884F24200EA589C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +73,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		937A69872886409D00440312 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				93D5F4892884F24200EA589C /* Home.storyboard */,
+				93D5F47B2884DDC100EA589C /* Main.storyboard */,
+				937A697D28853D6C00440312 /* Setting.storyboard */,
+				937A69852886407B00440312 /* Intro.storyboard */,
+				937A69812886401400440312 /* Search.storyboard */,
+				937A69832886404800440312 /* Trend.storyboard */,
+				935588742886720300EE480B /* Shopping.storyboard */,
+				93D5F4802884DDC300EA589C /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
 		93D5F4692884DDC100EA589C = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +107,23 @@
 		93D5F4742884DDC100EA589C /* TrendMedia */ = {
 			isa = PBXGroup;
 			children = (
+				9355887C28867D8C00EE480B /* TrendSearchTableViewCell.swift */,
+				9355887A28867BB400EE480B /* TrendSearchTableViewController.swift */,
+				935588782886768000EE480B /* ShoppingTableViewCell.swift */,
+				935588762886729C00EE480B /* ShoppingTableViewController.swift */,
 				93D5F4752884DDC100EA589C /* AppDelegate.swift */,
 				93D5F4772884DDC100EA589C /* SceneDelegate.swift */,
 				93D5F4792884DDC100EA589C /* ViewController.swift */,
-				93D5F47B2884DDC100EA589C /* Main.storyboard */,
+				937114162884FEE6003B2A74 /* SettingTableViewController.swift */,
+				937A697F28853DC500440312 /* KakaoSettingTableViewController.swift */,
+				93A4EC1A288643FC00432819 /* TrendViewController.swift */,
+				93A4EC1C2886440D00432819 /* SearchViewController.swift */,
+				93A4EC4A28864B9700432819 /* BucketListTableViewController.swift */,
+				93A4EC4C28864DA300432819 /* BucketListTableViewCell.swift */,
+				937A69872886409D00440312 /* StoryBoard */,
 				93D5F47E2884DDC300EA589C /* Assets.xcassets */,
-				93D5F4802884DDC300EA589C /* LaunchScreen.storyboard */,
+				93A4EC1E2886451A00432819 /* UIViewController+Extension.swift */,
+				93A4EC202886478B00432819 /* UITextField+Extension.swift */,
 				93D5F4832884DDC300EA589C /* Info.plist */,
 			);
 			path = TrendMedia;
@@ -125,9 +187,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937A69842886404800440312 /* Trend.storyboard in Resources */,
 				93D5F4822884DDC300EA589C /* LaunchScreen.storyboard in Resources */,
 				93D5F47F2884DDC300EA589C /* Assets.xcassets in Resources */,
+				937A69862886407B00440312 /* Intro.storyboard in Resources */,
 				93D5F47D2884DDC100EA589C /* Main.storyboard in Resources */,
+				93D5F48A2884F24200EA589C /* Home.storyboard in Resources */,
+				935588752886720300EE480B /* Shopping.storyboard in Resources */,
+				937A69822886401400440312 /* Search.storyboard in Resources */,
+				937A697E28853D6D00440312 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +206,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A4EC212886478B00432819 /* UITextField+Extension.swift in Sources */,
+				935588792886768000EE480B /* ShoppingTableViewCell.swift in Sources */,
+				935588772886729C00EE480B /* ShoppingTableViewController.swift in Sources */,
+				93A4EC4D28864DA300432819 /* BucketListTableViewCell.swift in Sources */,
+				93A4EC4B28864B9700432819 /* BucketListTableViewController.swift in Sources */,
+				93A4EC1F2886451A00432819 /* UIViewController+Extension.swift in Sources */,
+				937114172884FEE6003B2A74 /* SettingTableViewController.swift in Sources */,
+				9355887B28867BB400EE480B /* TrendSearchTableViewController.swift in Sources */,
+				93A4EC1D2886440D00432819 /* SearchViewController.swift in Sources */,
 				93D5F47A2884DDC100EA589C /* ViewController.swift in Sources */,
+				937A698028853DC500440312 /* KakaoSettingTableViewController.swift in Sources */,
 				93D5F4762884DDC100EA589C /* AppDelegate.swift in Sources */,
+				93A4EC1B288643FC00432819 /* TrendViewController.swift in Sources */,
 				93D5F4782884DDC100EA589C /* SceneDelegate.swift in Sources */,
+				9355887D28867D8C00EE480B /* TrendSearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +375,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +385,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,6 +404,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +414,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

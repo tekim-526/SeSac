@@ -90,10 +90,10 @@ class ViewController: UIViewController {
     //Alert
     func showAlertController() {
         // 1.흰 바탕: UIAlertController
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "오류", message: "뒤로 돌아가세요", preferredStyle: .alert)
         
         // 2.버튼
-        let ok = UIAlertAction(title: "확인", style: .destructive, handler: nil)
+        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
         let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
         let web = UIAlertAction(title: "web", style: .default)
         let copy = UIAlertAction(title: "copy", style: .default)
