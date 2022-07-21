@@ -29,5 +29,13 @@ class TrendSearchTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.height / 8
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("didSelectRowAt")
+        let sb = UIStoryboard(name: "Trend", bundle: nil)
+        // present말고 push
+        let vc = sb.instantiateViewController(withIdentifier: "RecommandCollectionViewController") as! RecommandCollectionViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
 
 }

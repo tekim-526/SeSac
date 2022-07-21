@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kcP-zd-7bC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hCE-fa-mau">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -12,7 +12,7 @@
         <!--Bucket List Table View Controller-->
         <scene sceneID="w54-HD-2lV">
             <objects>
-                <tableViewController id="dWb-ba-kQm" customClass="BucketListTableViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BucketListTableViewController" id="dWb-ba-kQm" customClass="BucketListTableViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hfo-Xz-Tfc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,10 +244,76 @@
                             <outlet property="delegate" destination="VWe-Uz-X8W" id="ble-ar-Pav"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="hwQ-rZ-qeN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTG-se-uee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="115.94202898550725" y="195.53571428571428"/>
+            <point key="canvasLocation" x="1026.0869565217392" y="195.53571428571428"/>
+        </scene>
+        <!--Trend Table Table View Controller-->
+        <scene sceneID="BFA-HA-7bp">
+            <objects>
+                <tableViewController id="Z07-ar-bWQ" customClass="TrendTableTableViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dOC-ub-CUj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="V3M-3O-zfr">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="259"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2r-O1-raP">
+                                    <rect key="frame" x="46" y="114" width="49" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="영화"/>
+                                    <connections>
+                                        <action selector="movieButtonTapped:" destination="Z07-ar-bWQ" eventType="touchUpInside" id="AOV-bi-77w"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSd-a8-Pz5">
+                                    <rect key="frame" x="313" y="114" width="49" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="도서"/>
+                                    <connections>
+                                        <action selector="bookButtonTapped:" destination="Z07-ar-bWQ" eventType="touchUpInside" id="jTO-cJ-90s"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pk5-JS-OZY">
+                                    <rect key="frame" x="177" y="114" width="61" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="드라마"/>
+                                    <connections>
+                                        <action selector="dramaButtonTapped:" destination="Z07-ar-bWQ" eventType="touchUpInside" id="YN7-cQ-Cm0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ln9-tq-tIv">
+                                <rect key="frame" x="0.0" y="303.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ln9-tq-tIv" id="6wb-Ug-aDW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Z07-ar-bWQ" id="swc-A4-Sby"/>
+                            <outlet property="delegate" destination="Z07-ar-bWQ" id="uX5-Vn-MvV"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdU-kA-b1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2133" y="29"/>
         </scene>
         <!--Book Collection View Controller-->
         <scene sceneID="oat-l7-I66">
@@ -328,58 +394,62 @@
                             <outlet property="delegate" destination="kcP-zd-7bC" id="3HL-1w-9Nj"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="5gO-nC-Glo"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWF-wr-obU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57.971014492753625" y="914.73214285714278"/>
+            <point key="canvasLocation" x="968.11594202898561" y="914.73214285714278"/>
         </scene>
-        <!--Recommand Collection View Controller-->
-        <scene sceneID="htj-xv-t1c">
+        <!--Detail View Controller-->
+        <scene sceneID="41h-Q8-45p">
             <objects>
-                <collectionViewController id="mIe-mf-Xt1" customClass="RecommandCollectionViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fFe-mi-csI">
+                <viewController storyboardIdentifier="DetailViewController" id="3sy-pb-OCx" customClass="DetailViewController" customModule="TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dKQ-6z-egm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="0.0" id="PNq-Wj-Mrf">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommandCollectionViewCell" id="OlD-f4-6Ok" customClass="RecommandCollectionViewCell" customModule="TrendMedia" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ip-Ud-rdb">
+                                <rect key="frame" x="149" y="353" width="116" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4ZT-N4-i3Q">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UVe-0F-HJY">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="UVe-0F-HJY" secondAttribute="bottom" id="WlU-01-gab"/>
-                                        <constraint firstItem="UVe-0F-HJY" firstAttribute="top" secondItem="4ZT-N4-i3Q" secondAttribute="top" id="wGM-cr-3FD"/>
-                                        <constraint firstItem="UVe-0F-HJY" firstAttribute="leading" secondItem="4ZT-N4-i3Q" secondAttribute="leading" id="yp0-hT-SsL"/>
-                                        <constraint firstAttribute="trailing" secondItem="UVe-0F-HJY" secondAttribute="trailing" id="zMS-zG-2gt"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <outlet property="posterImageView" destination="UVe-0F-HJY" id="fT2-jq-bst"/>
+                                    <action selector="pushButtonTapped:" destination="3sy-pb-OCx" eventType="touchUpInside" id="jfC-xu-N00"/>
                                 </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="mIe-mf-Xt1" id="0pI-Xt-igH"/>
-                            <outlet property="delegate" destination="mIe-mf-Xt1" id="r6Z-5U-TEE"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SjC-XN-qst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nwx-sR-Y8h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCv-L5-tJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983" y="196"/>
+            <point key="canvasLocation" x="1892.753623188406" y="914.73214285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LqF-mK-YyY">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="2Uu-EY-DS3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4cn-Bj-DI3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exH-m9-X1S">
+                                <rect key="frame" x="182" y="247" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="web"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G9f-Tc-jB6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="co0-TT-5Ny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2713" y="915"/>
         </scene>
         <!--Trend View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -414,13 +484,55 @@
             </objects>
             <point key="canvasLocation" x="778" y="-582"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DdD-Go-ehT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dHp-et-hNL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="joe-cd-Tco">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VWe-Uz-X8W" kind="relationship" relationship="rootViewController" id="6mi-4m-Uoq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVf-AQ-WAJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="195.53571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4WO-ib-Iy4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hCE-fa-mau" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XVQ-9a-aSW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kcP-zd-7bC" kind="relationship" relationship="rootViewController" id="SWs-bA-lxp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbI-c9-GAk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="914.73214285714278"/>
+        </scene>
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

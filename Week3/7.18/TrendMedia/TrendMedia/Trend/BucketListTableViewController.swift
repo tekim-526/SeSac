@@ -8,7 +8,7 @@
 import UIKit
 
 class BucketListTableViewController: UITableViewController {
-
+    static let identifier = "BucketListTableViewController"
     @IBOutlet weak var userTextField: UITextField!
 
     var list = ["범죄도시2", "탑건", "토르"]
@@ -16,7 +16,8 @@ class BucketListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 88
-        
+        navigationItem.title = "버킷리스트"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTapped))
     }
 
 
@@ -26,19 +27,40 @@ class BucketListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BucketListTableViewCell", for: indexPath) as! BucketListTableViewCell // 타입 캐스팅
+        let cell = tableView.dequeueReusableCell(withIdentifier: BucketListTableViewCell.identifier, for: indexPath) as! BucketListTableViewCell // 타입 캐스팅
         cell.bucketListLabel.text = list[indexPath.row]
         cell.bucketListLabel.font = .boldSystemFont(ofSize: 18)
         return cell
     }
+    
+    @objc func closeButtonTapped() {
+        // self 생략 가능
+        self.dismiss(animated: true)
+    }
+    
+    
+    
+    
+    
     @IBAction func userTextFieldReturn(_ sender: UITextField) {
-        list.append(sender.text!)
-        sender.text = ""
-        resignFirstResponder()
+// guard let 바인딩
+        //        guard let value = sender.text?.trimmingCharacters(in: .whitespacesAndNewlines), (2...6).contains(value.count) else {
+//            // 토스트 메시지 띄우기
+//            return
+//        }
+//        list.append(value)
+//        tableView.reloadData()
         
-        // MARK: - 중요! -> table 뷰를 갱신함
-        tableView.reloadData()
-        
+        if let value = sender.text?.trimmingCharacters(in: .whitespacesAndNewlines), !value.isEmpty, (2...6).contains(value.count) {
+            list.append(value)
+            sender.text = ""
+            resignFirstResponder()
+            
+            // MARK: - 중요! -> table 뷰를 갱신함
+            tableView.reloadData()
+        } else {
+            // 토스트메시지 띄우기
+        }
         // 특정 section만 갱신
         // tableView.reloadSections(<#T##sections: IndexSet##IndexSet#>, with: <#T##UITableView.RowAnimation#>)
   

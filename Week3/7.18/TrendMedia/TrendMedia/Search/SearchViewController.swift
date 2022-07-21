@@ -12,8 +12,10 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setBackgroundColor()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(dismissView))
     }
-    
+    @objc func dismissView() {
+        dismiss(animated: true)
+    }
 
 }

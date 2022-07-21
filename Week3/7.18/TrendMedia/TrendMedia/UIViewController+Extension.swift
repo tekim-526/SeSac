@@ -10,7 +10,6 @@ import UIKit
 extension UIViewController {
     
     func setBackgroundColor() {
-        view.backgroundColor = .orange
     }
     
     func showAlert() {

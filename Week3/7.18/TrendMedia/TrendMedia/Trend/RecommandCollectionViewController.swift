@@ -43,7 +43,9 @@ class RecommandCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandCollectionViewCell", for: indexPath) as! RecommandCollectionViewCell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommandCollectionViewCell", for: indexPath) as? RecommandCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         cell.posterImageView.backgroundColor = .systemMint
         // MARK: - KingFisher 사용
         cell.posterImageView.kf.setImage(with: imageURL)
@@ -52,6 +54,7 @@ class RecommandCollectionViewController: UICollectionViewController {
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // MARK: - Toast - Swift
-        view.makeToast("\(indexPath.item)번째 셀을 선택했습니다", duration: 1, position: .bottom)
+        view.makeToast("\(indexPath.item + 1)번째 셀을 선택했습니다", duration: 1, position: .bottom)
+        self.navigationController?.popViewController(animated: true)
     }
 }
