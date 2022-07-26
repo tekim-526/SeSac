@@ -211,25 +211,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7s-E0-ib5">
-                                <rect key="frame" x="184.5" y="88" width="41.5" height="20.5"/>
+                                <rect key="frame" x="186.5" y="88" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pQo-LP-LRh">
-                                <rect key="frame" x="40" y="200.5" width="330" height="182.5"/>
+                                <rect key="frame" x="40" y="200.5" width="334" height="184.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="C39-Pa-o0E">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="152"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sesac_slime2" translatesAutoresizingMaskIntoConstraints="NO" id="OZq-bn-xze">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="152"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="OZq-bn-xze" secondAttribute="height" id="JbP-9o-UMO"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sesac_slime3" translatesAutoresizingMaskIntoConstraints="NO" id="0gj-dJ-GjW">
-                                                <rect key="frame" x="180" y="0.0" width="150" height="150"/>
+                                                <rect key="frame" x="182" y="0.0" width="152" height="152"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0gj-dJ-GjW" secondAttribute="height" id="6op-M4-W7l"/>
                                                     <constraint firstAttribute="width" constant="150" id="K4P-FF-hSo"/>
@@ -238,16 +238,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="K3X-gL-fjO">
-                                        <rect key="frame" x="0.0" y="162" width="330" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="164" width="334" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태수" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEc-se-51a">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tekim" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3U-pZ-5NF">
-                                                <rect key="frame" x="180" y="0.0" width="150" height="20.5"/>
+                                                <rect key="frame" x="182" y="0.0" width="152" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -257,20 +257,20 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="kon-7f-Tmf">
-                                <rect key="frame" x="40" y="415" width="330" height="182.5"/>
+                                <rect key="frame" x="40" y="417" width="334" height="184.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ySH-5k-vce">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="152"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sesac_slime4" translatesAutoresizingMaskIntoConstraints="NO" id="faw-Dg-w46">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="152"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="faw-Dg-w46" secondAttribute="height" id="78L-ud-B44"/>
                                                     <constraint firstAttribute="width" constant="150" id="THx-wY-PTL"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sesac_slime5" translatesAutoresizingMaskIntoConstraints="NO" id="ATl-dR-VxK">
-                                                <rect key="frame" x="180" y="0.0" width="150" height="150"/>
+                                                <rect key="frame" x="182" y="0.0" width="152" height="152"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="OTE-td-SpM"/>
                                                     <constraint firstAttribute="width" secondItem="ATl-dR-VxK" secondAttribute="height" id="oQ7-Sl-L20"/>
@@ -279,16 +279,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2uD-Ng-a8h">
-                                        <rect key="frame" x="0.0" y="162" width="330" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="164" width="334" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kimts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRX-3v-JrN">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tsesu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hP-b1-pVv">
-                                                <rect key="frame" x="180" y="0.0" width="150" height="20.5"/>
+                                                <rect key="frame" x="182" y="0.0" width="152" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

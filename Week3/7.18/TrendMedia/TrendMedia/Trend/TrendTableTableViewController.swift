@@ -21,31 +21,35 @@ class TrendTableTableViewController: UITableViewController {
         // 1.
         let sb = UIStoryboard(name: "Trend", bundle: nil)
         // 2.
-        let vc = sb.instantiateViewController(withIdentifier: BucketListTableViewController.identifier)
+        let vc = sb.instantiateViewController(withIdentifier: BucketListTableViewController.identifier) as! BucketListTableViewController
         // 3.
+        vc.textFieldPlaceHolder = "영화"
         self.present(vc, animated: true)
     }
     @IBAction func dramaButtonTapped(_ sender: UIButton) {
         // 1.
         let sb = UIStoryboard(name: "Trend", bundle: nil)
         // 2.
-        let vc = sb.instantiateViewController(withIdentifier: BucketListTableViewController.identifier)
+        let vc = sb.instantiateViewController(withIdentifier: BucketListTableViewController.identifier) as! BucketListTableViewController
         // 2.5. present 시 화면 전환 방식 설정(옵션)
         vc.modalPresentationStyle = .fullScreen
         // 3.
+        vc.textFieldPlaceHolder = "드라마"
         self.present(vc, animated: true)
     }
     @IBAction func bookButtonTapped(_ sender: UIButton) {
         // 1.
         let sb = UIStoryboard(name: "Trend", bundle: nil)
         // 2.
-        let vc = sb.instantiateViewController(withIdentifier: BucketListTableViewController.identifier)
+        let vc = sb.instantiateViewController(withIdentifier: BucketListTableViewController.identifier) as! BucketListTableViewController
+        vc.textFieldPlaceHolder = "책"
         // 2.5 네비게이션 컨트롤러 임베드
         let nav = UINavigationController(rootViewController: vc)
 
         // 2.5. present 시 화면 전환 방식 설정(옵션)
         nav.modalPresentationStyle = .fullScreen
         // 3.
+        
         self.present(nav, animated: true)
         
     }

@@ -18,6 +18,9 @@ import Kingfisher
  */
 
 class RecommandCollectionViewController: UICollectionViewController {
+    // 1. 데이터를 받을 공간
+    var movieData: Movie?
+    
     // MARK: - KingFisher
     let imageURL = URL(string: "https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20220607_214%2F165458453305506YX7_JPEG%2Fmovie_image.jpg")
     
@@ -35,7 +38,8 @@ class RecommandCollectionViewController: UICollectionViewController {
         layout.minimumInteritemSpacing = spacing
         // 레이아웃 넣어줌
         collectionView.collectionViewLayout = layout
-        
+        // 3. 값 전달 - 보여지는 모습
+        title = movieData?.title == nil ? "title" : movieData?.title
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9301FD46288BDE8D0003FBEC /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 9301FD45288BDE8D0003FBEC /* TextFieldEffects */; };
+		932A68F9288A903A00914693 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A68F8288A903A00914693 /* Model.swift */; };
+		9358D80F288C0A040001277C /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9358D80E288C0A040001277C /* SettingTableViewController.swift */; };
+		9373FBA2288C14B9000F0576 /* RenameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9373FBA1288C14B9000F0576 /* RenameViewController.swift */; };
+		93B48119288A72DE004B4172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B48118288A72DE004B4172 /* AppDelegate.swift */; };
+		93B4811B288A72DE004B4172 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4811A288A72DE004B4172 /* SceneDelegate.swift */; };
+		93B4811D288A72DE004B4172 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B4811C288A72DE004B4172 /* PopUpViewController.swift */; };
+		93B48120288A72DE004B4172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B4811E288A72DE004B4172 /* Main.storyboard */; };
+		93B48122288A72E0004B4172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B48121288A72E0004B4172 /* Assets.xcassets */; };
+		93B48125288A72E0004B4172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B48123288A72E0004B4172 /* LaunchScreen.storyboard */; };
+		93B4812E288A8555004B4172 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 93B4812D288A8555004B4172 /* Toast */; };
+		93B48134288A8576004B4172 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 93B48133288A8576004B4172 /* IQKeyboardManagerSwift */; };
+		93B48136288A86E0004B4172 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B48135288A86E0004B4172 /* MainViewController.swift */; };
+		93B48138288A87C8004B4172 /* DamagochiCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B48137288A87C8004B4172 /* DamagochiCollectionViewController.swift */; };
+		93B4813A288A87E7004B4172 /* DamagochiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B48139288A87E7004B4172 /* DamagochiCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		932A68F8288A903A00914693 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9358D80E288C0A040001277C /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		9373FBA1288C14B9000F0576 /* RenameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameViewController.swift; sourceTree = "<group>"; };
+		93B48115288A72DE004B4172 /* Damagochi Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Damagochi Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B48118288A72DE004B4172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		93B4811A288A72DE004B4172 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		93B4811C288A72DE004B4172 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		93B4811F288A72DE004B4172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93B48121288A72E0004B4172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93B48124288A72E0004B4172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93B48126288A72E0004B4172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93B48135288A86E0004B4172 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		93B48137288A87C8004B4172 /* DamagochiCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagochiCollectionViewController.swift; sourceTree = "<group>"; };
+		93B48139288A87E7004B4172 /* DamagochiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DamagochiCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93B48112288A72DE004B4172 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9301FD46288BDE8D0003FBEC /* TextFieldEffects in Frameworks */,
+				93B4812E288A8555004B4172 /* Toast in Frameworks */,
+				93B48134288A8576004B4172 /* IQKeyboardManagerSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93B4810C288A72DE004B4172 = {
+			isa = PBXGroup;
+			children = (
+				93B48117288A72DE004B4172 /* Damagochi Project */,
+				93B48116288A72DE004B4172 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93B48116288A72DE004B4172 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93B48115288A72DE004B4172 /* Damagochi Project.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93B48117288A72DE004B4172 /* Damagochi Project */ = {
+			isa = PBXGroup;
+			children = (
+				93B48126288A72E0004B4172 /* Info.plist */,
+				93B48118288A72DE004B4172 /* AppDelegate.swift */,
+				93B48139288A87E7004B4172 /* DamagochiCollectionViewCell.swift */,
+				93B48137288A87C8004B4172 /* DamagochiCollectionViewController.swift */,
+				93B48135288A86E0004B4172 /* MainViewController.swift */,
+				932A68F8288A903A00914693 /* Model.swift */,
+				93B4811C288A72DE004B4172 /* PopUpViewController.swift */,
+				9373FBA1288C14B9000F0576 /* RenameViewController.swift */,
+				93B4811A288A72DE004B4172 /* SceneDelegate.swift */,
+				9358D80E288C0A040001277C /* SettingTableViewController.swift */,
+				93B48121288A72E0004B4172 /* Assets.xcassets */,
+				93B48123288A72E0004B4172 /* LaunchScreen.storyboard */,
+				93B4811E288A72DE004B4172 /* Main.storyboard */,
+			);
+			path = "Damagochi Project";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93B48114288A72DE004B4172 /* Damagochi Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93B48129288A72E0004B4172 /* Build configuration list for PBXNativeTarget "Damagochi Project" */;
+			buildPhases = (
+				93B48111288A72DE004B4172 /* Sources */,
+				93B48112288A72DE004B4172 /* Frameworks */,
+				93B48113288A72DE004B4172 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Damagochi Project";
+			packageProductDependencies = (
+				93B4812D288A8555004B4172 /* Toast */,
+				93B48133288A8576004B4172 /* IQKeyboardManagerSwift */,
+				9301FD45288BDE8D0003FBEC /* TextFieldEffects */,
+			);
+			productName = "Damagochi Project";
+			productReference = 93B48115288A72DE004B4172 /* Damagochi Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93B4810D288A72DE004B4172 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					93B48114288A72DE004B4172 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 93B48110288A72DE004B4172 /* Build configuration list for PBXProject "Damagochi Project" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93B4810C288A72DE004B4172;
+			packageReferences = (
+				93B4812C288A8555004B4172 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				93B48132288A8576004B4172 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				9301FD44288BDE8D0003FBEC /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
+			productRefGroup = 93B48116288A72DE004B4172 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93B48114288A72DE004B4172 /* Damagochi Project */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93B48113288A72DE004B4172 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B48125288A72E0004B4172 /* LaunchScreen.storyboard in Resources */,
+				93B48122288A72E0004B4172 /* Assets.xcassets in Resources */,
+				93B48120288A72DE004B4172 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93B48111288A72DE004B4172 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9373FBA2288C14B9000F0576 /* RenameViewController.swift in Sources */,
+				9358D80F288C0A040001277C /* SettingTableViewController.swift in Sources */,
+				932A68F9288A903A00914693 /* Model.swift in Sources */,
+				93B4811D288A72DE004B4172 /* PopUpViewController.swift in Sources */,
+				93B48119288A72DE004B4172 /* AppDelegate.swift in Sources */,
+				93B4811B288A72DE004B4172 /* SceneDelegate.swift in Sources */,
+				93B48138288A87C8004B4172 /* DamagochiCollectionViewController.swift in Sources */,
+				93B4813A288A87E7004B4172 /* DamagochiCollectionViewCell.swift in Sources */,
+				93B48136288A86E0004B4172 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93B4811E288A72DE004B4172 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93B4811F288A72DE004B4172 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		93B48123288A72E0004B4172 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93B48124288A72E0004B4172 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93B48127288A72E0004B4172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93B48128288A72E0004B4172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93B4812A288A72E0004B4172 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FQ63CT4A3G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Damagochi Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "김태수";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tekim.Damagochi-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		93B4812B288A72E0004B4172 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FQ63CT4A3G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Damagochi Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "김태수";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tekim.Damagochi-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93B48110288A72DE004B4172 /* Build configuration list for PBXProject "Damagochi Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93B48127288A72E0004B4172 /* Debug */,
+				93B48128288A72E0004B4172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93B48129288A72E0004B4172 /* Build configuration list for PBXNativeTarget "Damagochi Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93B4812A288A72E0004B4172 /* Debug */,
+				93B4812B288A72E0004B4172 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9301FD44288BDE8D0003FBEC /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		93B4812C288A8555004B4172 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		93B48132288A8576004B4172 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9301FD45288BDE8D0003FBEC /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9301FD44288BDE8D0003FBEC /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+		93B4812D288A8555004B4172 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93B4812C288A8555004B4172 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		93B48133288A8576004B4172 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93B48132288A8576004B4172 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 93B4810D288A72DE004B4172 /* Project object */;
+}

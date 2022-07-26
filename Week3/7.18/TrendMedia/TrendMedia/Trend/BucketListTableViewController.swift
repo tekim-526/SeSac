@@ -12,12 +12,14 @@ class BucketListTableViewController: UITableViewController {
     @IBOutlet weak var userTextField: UITextField!
 
     var list = ["범죄도시2", "탑건", "토르"]
-
+    var textFieldPlaceHolder: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 88
         navigationItem.title = "버킷리스트"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTapped))
+        userTextField.placeholder = textFieldPlaceHolder
     }
 
 

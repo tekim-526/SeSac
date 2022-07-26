@@ -52,8 +52,8 @@ class BookCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         view.makeToast("\(indexPath.row)번째 탭이 선택되었습니다.", duration: 0.5) { _ in
-            let sb = UIStoryboard(name: "Trend", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "DetailViewController")
+           let sb = UIStoryboard(name: "Trend", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
 
