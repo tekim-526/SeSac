@@ -13,6 +13,13 @@
 		931F43442890DD7000A3F14F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931F43422890DD7000A3F14F /* Main.storyboard */; };
 		931F43462890DD7200A3F14F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931F43452890DD7200A3F14F /* Assets.xcassets */; };
 		931F43492890DD7200A3F14F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 931F43472890DD7200A3F14F /* LaunchScreen.storyboard */; };
+		931F43522890E20B00A3F14F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F43512890E20B00A3F14F /* SearchViewController.swift */; };
+		931F43552890E4DE00A3F14F /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F43532890E4DE00A3F14F /* ListTableViewCell.swift */; };
+		931F43562890E4DE00A3F14F /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 931F43542890E4DE00A3F14F /* ListTableViewCell.xib */; };
+		931F439728920CD200A3F14F /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F439628920CD200A3F14F /* ViewPresentableProtocol.swift */; };
+		931F43992892236C00A3F14F /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F43982892236C00A3F14F /* LottoViewController.swift */; };
+		931F439B2892306600A3F14F /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F439A2892306600A3F14F /* TranslateViewController.swift */; };
+		931F439D28923AB800A3F14F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931F439C28923AB800A3F14F /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		931F43452890DD7200A3F14F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		931F43482890DD7200A3F14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		931F434A2890DD7200A3F14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		931F43512890E20B00A3F14F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		931F43532890E4DE00A3F14F /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		931F43542890E4DE00A3F14F /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		931F439628920CD200A3F14F /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
+		931F43982892236C00A3F14F /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
+		931F439A2892306600A3F14F /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		931F439C28923AB800A3F14F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +74,26 @@
 				931F433E2890DD7000A3F14F /* SceneDelegate.swift */,
 				931F43402890DD7000A3F14F /* ViewController.swift */,
 				931F43422890DD7000A3F14F /* Main.storyboard */,
+				931F439C28923AB800A3F14F /* WebViewController.swift */,
+				931F439A2892306600A3F14F /* TranslateViewController.swift */,
+				931F43982892236C00A3F14F /* LottoViewController.swift */,
+				931F43532890E4DE00A3F14F /* ListTableViewCell.swift */,
+				931F43542890E4DE00A3F14F /* ListTableViewCell.xib */,
+				931F43512890E20B00A3F14F /* SearchViewController.swift */,
+				931F439528920CA000A3F14F /* Protocol */,
 				931F43452890DD7200A3F14F /* Assets.xcassets */,
 				931F43472890DD7200A3F14F /* LaunchScreen.storyboard */,
 				931F434A2890DD7200A3F14F /* Info.plist */,
 			);
 			path = "SeSac Network Basic";
+			sourceTree = "<group>";
+		};
+		931F439528920CA000A3F14F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				931F439628920CD200A3F14F /* ViewPresentableProtocol.swift */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				931F43492890DD7200A3F14F /* LaunchScreen.storyboard in Resources */,
+				931F43562890E4DE00A3F14F /* ListTableViewCell.xib in Resources */,
 				931F43462890DD7200A3F14F /* Assets.xcassets in Resources */,
 				931F43442890DD7000A3F14F /* Main.storyboard in Resources */,
 			);
@@ -139,8 +169,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				931F43412890DD7000A3F14F /* ViewController.swift in Sources */,
+				931F439D28923AB800A3F14F /* WebViewController.swift in Sources */,
 				931F433D2890DD7000A3F14F /* AppDelegate.swift in Sources */,
+				931F43522890E20B00A3F14F /* SearchViewController.swift in Sources */,
+				931F43992892236C00A3F14F /* LottoViewController.swift in Sources */,
 				931F433F2890DD7000A3F14F /* SceneDelegate.swift in Sources */,
+				931F439B2892306600A3F14F /* TranslateViewController.swift in Sources */,
+				931F439728920CD200A3F14F /* ViewPresentableProtocol.swift in Sources */,
+				931F43552890E4DE00A3F14F /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
