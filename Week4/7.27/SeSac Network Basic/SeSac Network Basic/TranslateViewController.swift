@@ -16,17 +16,26 @@ class TranslateViewController: UIViewController {
 
     @IBOutlet weak var userInputTextView: UITextView!
     
-    let textViewPlaceholderText = "번역하고 싶은 문장을 작성해보세요."
+    let textViewPlaceholderText = "텍스트 필드를 입력해 주세요"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userInputTextView.delegate = self
-        userInputTextView.text = textViewPlaceholderText
-        userInputTextView.textColor = .lightGray
+//        userInputTextView.text = textViewPlaceholderText
+//        userInputTextView.textColor = .lightGray
+//        userInputTextView.font = UIFont(name: "HSSaemaul", size: 16)
+//        userInputTextView.dataDetectorTypes = .link
+        
+        let attributedTitle = NSMutableAttributedString(string: "Please Input Text  ")
+        attributedTitle.imgStr()
+        userInputTextView.attributedText = attributedTitle
+        userInputTextView.dataDetectorTypes = .phoneNumber
+        userInputTextView.isEditable = false
+        
         
     }
-
+    
     
 
 }
@@ -57,5 +66,13 @@ extension TranslateViewController: UITextViewDelegate {
         }
         
         print("end")
+    }
+}
+extension NSMutableAttributedString {
+    func imgStr() {
+        let imageAttatchment = NSTextAttachment()
+        imageAttatchment.image = UIImage(systemName: "checkmark")
+        let strImg = NSAttributedString(attachment: imageAttatchment)
+        self.append(strImg)
     }
 }

@@ -1,16 +1,18 @@
 //
-//  ListTableViewCell.swift
-//  SeSac Network Basic
+//  TMDBTableViewCell.swift
+//  TMDBProject
 //
-//  Created by Kim TaeSoo on 2022/07/27.
+//  Created by Kim TaeSoo on 2022/08/03.
 //
 
 import UIKit
 
-class ListTableViewCell: UITableViewCell {
+class TMDBTableViewCell: UITableViewCell {
 
-    
+    @IBOutlet weak var posterView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var overviewLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,3 +25,4 @@ class ListTableViewCell: UITableViewCell {
     }
     
 }
+
