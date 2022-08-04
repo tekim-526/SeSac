@@ -20,6 +20,12 @@
 		938BFABF289A86290019E237 /* TMDBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFABD289A86290019E237 /* TMDBTableViewCell.swift */; };
 		938BFAC0289A86290019E237 /* TMDBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938BFABE289A86290019E237 /* TMDBTableViewCell.xib */; };
 		938BFAC3289A87E90019E237 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFAC2289A87E90019E237 /* Utils.swift */; };
+		938BFAC6289B4FC90019E237 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 938BFAC5289B4FC90019E237 /* JGProgressHUD */; };
+		938BFAD4289B92B70019E237 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFAD3289B92B70019E237 /* MovieModel.swift */; };
+		938BFAD6289BBB860019E237 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFAD5289BBB850019E237 /* MovieDetailViewController.swift */; };
+		938BFADB289C0AFE0019E237 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFAD9289C0AFE0019E237 /* CastTableViewCell.swift */; };
+		938BFADC289C0AFE0019E237 /* CastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */; };
+		938BFADE289C15590019E237 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFADD289C15590019E237 /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,11 @@
 		938BFABD289A86290019E237 /* TMDBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTableViewCell.swift; sourceTree = "<group>"; };
 		938BFABE289A86290019E237 /* TMDBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TMDBTableViewCell.xib; sourceTree = "<group>"; };
 		938BFAC2289A87E90019E237 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		938BFAD3289B92B70019E237 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		938BFAD5289BBB850019E237 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		938BFAD9289C0AFE0019E237 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
+		938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastTableViewCell.xib; sourceTree = "<group>"; };
+		938BFADD289C15590019E237 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopUpViewController.swift; path = TMDBProject/PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938BFAC6289B4FC90019E237 /* JGProgressHUD in Frameworks */,
 				938BFABC289A846B0019E237 /* Kingfisher in Frameworks */,
 				938BFAB6289A84530019E237 /* SwiftyJSON in Frameworks */,
 				938BFAB9289A845E0019E237 /* Alamofire in Frameworks */,
@@ -54,6 +66,7 @@
 		934CB51B2899F6C200E54B35 = {
 			isa = PBXGroup;
 			children = (
+				938BFADD289C15590019E237 /* PopUpViewController.swift */,
 				934CB5262899F6C200E54B35 /* TMDBProject */,
 				934CB5252899F6C200E54B35 /* Products */,
 			);
@@ -75,6 +88,10 @@
 				934CB5292899F6C200E54B35 /* SceneDelegate.swift */,
 				934CB53B2899F98100E54B35 /* APIKey.swift */,
 				934CB52B2899F6C200E54B35 /* ViewController.swift */,
+				938BFAD3289B92B70019E237 /* MovieModel.swift */,
+				938BFAD5289BBB850019E237 /* MovieDetailViewController.swift */,
+				938BFAD9289C0AFE0019E237 /* CastTableViewCell.swift */,
+				938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */,
 				934CB52D2899F6C200E54B35 /* Main.storyboard */,
 				938BFABD289A86290019E237 /* TMDBTableViewCell.swift */,
 				938BFABE289A86290019E237 /* TMDBTableViewCell.xib */,
@@ -113,6 +130,7 @@
 				938BFAB5289A84530019E237 /* SwiftyJSON */,
 				938BFAB8289A845E0019E237 /* Alamofire */,
 				938BFABB289A846B0019E237 /* Kingfisher */,
+				938BFAC5289B4FC90019E237 /* JGProgressHUD */,
 			);
 			productName = TMDBProject;
 			productReference = 934CB5242899F6C200E54B35 /* TMDBProject.app */;
@@ -146,6 +164,7 @@
 				938BFAB4289A84530019E237 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				938BFAB7289A845E0019E237 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				938BFABA289A846B0019E237 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				938BFAC4289B4FC90019E237 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 			);
 			productRefGroup = 934CB5252899F6C200E54B35 /* Products */;
 			projectDirPath = "";
@@ -163,6 +182,7 @@
 			files = (
 				938BFAC0289A86290019E237 /* TMDBTableViewCell.xib in Resources */,
 				934CB5342899F6C500E54B35 /* LaunchScreen.storyboard in Resources */,
+				938BFADC289C0AFE0019E237 /* CastTableViewCell.xib in Resources */,
 				934CB5312899F6C500E54B35 /* Assets.xcassets in Resources */,
 				934CB52F2899F6C200E54B35 /* Main.storyboard in Resources */,
 			);
@@ -175,12 +195,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				938BFAD4289B92B70019E237 /* MovieModel.swift in Sources */,
 				934CB52C2899F6C200E54B35 /* ViewController.swift in Sources */,
 				938BFABF289A86290019E237 /* TMDBTableViewCell.swift in Sources */,
 				934CB5282899F6C200E54B35 /* AppDelegate.swift in Sources */,
+				938BFAD6289BBB860019E237 /* MovieDetailViewController.swift in Sources */,
+				938BFADE289C15590019E237 /* PopUpViewController.swift in Sources */,
 				934CB53C2899F98100E54B35 /* APIKey.swift in Sources */,
 				934CB52A2899F6C200E54B35 /* SceneDelegate.swift in Sources */,
 				938BFAC3289A87E90019E237 /* Utils.swift in Sources */,
+				938BFADB289C0AFE0019E237 /* CastTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +448,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		938BFAC4289B4FC90019E237 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -441,6 +473,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 938BFABA289A846B0019E237 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		938BFAC5289B4FC90019E237 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 938BFAC4289B4FC90019E237 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

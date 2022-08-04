@@ -1,17 +1,17 @@
 //
-//  TMDBTableViewCell.swift
+//  CastTableViewCell.swift
 //  TMDBProject
 //
-//  Created by Kim TaeSoo on 2022/08/03.
+//  Created by Kim TaeSoo on 2022/08/04.
 //
 
 import UIKit
 
-class TMDBTableViewCell: UITableViewCell {
+class CastTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var posterView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var castImageView: UIImageView!
     @IBOutlet weak var castLabel: UILabel!
+    @IBOutlet weak var characterLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,4 +25,3 @@ class TMDBTableViewCell: UITableViewCell {
     }
     
 }
-
