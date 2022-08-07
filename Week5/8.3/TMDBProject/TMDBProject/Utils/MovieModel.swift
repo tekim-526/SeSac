@@ -24,3 +24,7 @@ struct CastModel: Equatable {
     var profileImageURL: URL
     
 }
+
+struct TrailerModel {
+    var trailerLink: URL
+}

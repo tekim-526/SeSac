@@ -15,7 +15,7 @@ class TMDBAPINetworkManager {
     
     static let shared = TMDBAPINetworkManager()
     var list: [CastModel] = []
-    
+    var trailerList: [TrailerModel] = []
     func fetchMovie(completionHandler: @escaping (MovieModel) -> ()) {
         let url = EndPoint.TMDB_URL + APIKey.TMDB_Key
         AF.request(url, method: .get).validate().responseData { response in
@@ -60,6 +60,23 @@ class TMDBAPINetworkManager {
             }
         }
     }
+    
+    func fetchTrailer(movieID: Int, completionHandler: @escaping ([TrailerModel]) -> ()) {
+        let url = "https://api.themoviedb.org/3/movie/\(movieID)/videos?api_key=" + APIKey.TMDB_Key
+        
+        AF.request(url, method: .get).validate().responseData { response in
+            switch response.result {
+            case .success(let data):
+                let json = JSON(data)
+                guard let trailerLink = URL(string: EndPoint.youtube_URL + json["results"][0]["key"].stringValue) else { return }
+                self.trailerList.append(TrailerModel(trailerLink: trailerLink))
+                completionHandler(self.trailerList)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     
     
 }

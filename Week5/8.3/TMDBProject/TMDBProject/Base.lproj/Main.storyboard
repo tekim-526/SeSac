@@ -214,6 +214,40 @@
             </objects>
             <point key="canvasLocation" x="3531.884057971015" y="97.767857142857139"/>
         </scene>
+        <!--Youtube Web View Controller-->
+        <scene sceneID="q3f-AT-FyJ">
+            <objects>
+                <viewController storyboardIdentifier="YoutubeWebViewController" id="MmY-15-G2D" customClass="YoutubeWebViewController" customModule="TMDBProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mjl-Tw-ufH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWZ-JP-Ya9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sJs-rZ-Nhm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dWZ-JP-Ya9" firstAttribute="leading" secondItem="sJs-rZ-Nhm" secondAttribute="leading" id="HXE-jl-LXD"/>
+                            <constraint firstItem="sJs-rZ-Nhm" firstAttribute="trailing" secondItem="dWZ-JP-Ya9" secondAttribute="trailing" id="Z8e-e6-gFY"/>
+                            <constraint firstItem="sJs-rZ-Nhm" firstAttribute="bottom" secondItem="dWZ-JP-Ya9" secondAttribute="bottom" id="qIn-q5-tva"/>
+                            <constraint firstItem="dWZ-JP-Ya9" firstAttribute="top" secondItem="sJs-rZ-Nhm" secondAttribute="top" id="rL3-j6-Kgq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="trailerWebView" destination="dWZ-JP-Ya9" id="taK-q5-4v3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Roe-Qr-3WF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="829"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="xXF-VF-6nq">
             <objects>

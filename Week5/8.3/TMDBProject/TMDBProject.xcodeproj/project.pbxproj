@@ -27,6 +27,7 @@
 		938BFADB289C0AFE0019E237 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFAD9289C0AFE0019E237 /* CastTableViewCell.swift */; };
 		938BFADC289C0AFE0019E237 /* CastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */; };
 		938BFADE289C15590019E237 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFADD289C15590019E237 /* PopUpViewController.swift */; };
+		93ECA92A28A00448003A0F79 /* YoutubeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ECA92928A00448003A0F79 /* YoutubeWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		938BFAD9289C0AFE0019E237 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
 		938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastTableViewCell.xib; sourceTree = "<group>"; };
 		938BFADD289C15590019E237 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		93ECA92928A00448003A0F79 /* YoutubeWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				938BFAD9289C0AFE0019E237 /* CastTableViewCell.swift */,
 				938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */,
 				934CB52D2899F6C200E54B35 /* Main.storyboard */,
+				93ECA92928A00448003A0F79 /* YoutubeWebViewController.swift */,
 				938BFABD289A86290019E237 /* TMDBTableViewCell.swift */,
 				938BFABE289A86290019E237 /* TMDBTableViewCell.xib */,
 				934CB5302899F6C500E54B35 /* Assets.xcassets */,
@@ -201,6 +204,7 @@
 				938BFAD4289B92B70019E237 /* MovieModel.swift in Sources */,
 				934CB52C2899F6C200E54B35 /* ViewController.swift in Sources */,
 				938BFABF289A86290019E237 /* TMDBTableViewCell.swift in Sources */,
+				93ECA92A28A00448003A0F79 /* YoutubeWebViewController.swift in Sources */,
 				934CB5282899F6C200E54B35 /* AppDelegate.swift in Sources */,
 				938BFAD6289BBB860019E237 /* MovieDetailViewController.swift in Sources */,
 				938BFADE289C15590019E237 /* PopUpViewController.swift in Sources */,
