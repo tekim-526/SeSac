@@ -10,7 +10,7 @@ import Kingfisher
 import SwiftUI
 
 class MovieDetailViewController: UIViewController {
-    var movieData: [MovieModel]!
+    var movieData: MovieModel!
     var castData: [CastModel]!
     var section: Int!
     
@@ -27,9 +27,9 @@ class MovieDetailViewController: UIViewController {
         castTableView.register(UINib(nibName: "CastTableViewCell", bundle: nil), forCellReuseIdentifier: "CastTableViewCell")
         castTableView.delegate = self
         castTableView.dataSource = self
-        print(castTableView.frame.height)
+        navigationController?.isNavigationBarHidden = false
         castTableView.rowHeight = castTableView.frame.height / 4
-        print(castTableView.rowHeight)
+        
         configureUI()
     }
     
@@ -37,25 +37,25 @@ class MovieDetailViewController: UIViewController {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: "PopUpViewController") as? PopUpViewController else { return }
         vc.modalPresentationStyle = .formSheet
-        vc.titleText = movieData[section].title
-        vc.overviewText = movieData[section].overView
+        vc.titleText = movieData.title[section]
+        vc.overviewText = movieData.overView[section]
         present(vc, animated: true)
     }
     func configureUI() {
         
-        titleLabel.text = movieData[section].title
+        titleLabel.text = movieData.title[section]
         titleLabel.font = .systemFont(ofSize: 24, weight: .bold)
         titleLabel.textColor = .white
         
         overViewLabel.numberOfLines = 2
-        overViewLabel.text = movieData[section].overView
+        overViewLabel.text = movieData.overView[section]
         
         overViewbutton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
         overViewbutton.tintColor = .black
         
-        posterImageView.kf.setImage(with: movieData[section].imageURL)
+        posterImageView.kf.setImage(with: movieData.imageURL[section])
         backDropPathImageView.contentMode = .scaleAspectFill
-        backDropPathImageView.kf.setImage(with: movieData[section].backDropPathURL)
+        backDropPathImageView.kf.setImage(with: movieData.backDropPathURL[section])
     }
 }
 

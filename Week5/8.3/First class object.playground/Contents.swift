@@ -95,7 +95,6 @@ let plusCalculate = calculate(operand: "+")
 plusCalculate(5, 10)
 
 
-
 // 3번 특성
 func evenNumber() {
     print("짝수")
@@ -118,3 +117,140 @@ resultNumber(number: 101) { // 이름없는 함수
     print(234)
 }
 
+
+func studyiOS() {
+    print("주말에도 공부하기")
+}
+
+let studyiOSHarder: () -> () = {
+    print("주말에도 공부하기")
+}
+
+// '클로저 헤더' in '클로저 바디'
+let studyiOSHarder2 = { () -> () in
+    print("주말에도 공부하기")
+}
+
+studyiOSHarder2()
+
+func getStudyWithMe(study: () -> ()) {
+    print("getStudyWithMe")
+    study()
+}
+getStudyWithMe(study: studyiOS)
+
+// 함수뒤에 클로저가 실행
+// 트레일링(후행) 클로저
+getStudyWithMe() { () -> () in
+    print("주말에도 공부하기")
+}
+
+func randomNumber(result: (Int) -> String) {
+    result(Int.random(in: 1...100))
+}
+
+// 인라인 클로저
+randomNumber(result: { (number: Int) -> String in
+    return "\(number)"
+})
+
+randomNumber(result: { (number) in
+    return "\(number)"
+})
+
+randomNumber(result: {
+    return "\($0)"
+})
+randomNumber() {
+    return "\($0)"
+}
+
+randomNumber() { number in
+    return "\(number)"
+}
+
+// 고차함수: filter, reduce, map
+
+// 시간 측정
+func processTime(code: () -> ()) {
+    let start = CFAbsoluteTimeGetCurrent()
+    code()
+    let end = CFAbsoluteTimeGetCurrent() - start
+    print(end)
+}
+
+
+// filter
+let student = [2.3, 2.8, 3.6, 1.7, 3.97 ,4.0 ,4.1 ,4.5, 2.8, 3.6, 1.7, 3.97]
+
+let filterStudent = student.filter { $0 >= 4.0 }
+print(filterStudent)
+
+processTime {
+    var new: [Double] = []
+    for i in student {
+        if i >= 4.0 {
+            new.append(i)
+        }
+    }
+    print("for in loop = \(new)")
+}
+
+processTime {
+    student.filter { $0 >= 4.0 }
+    print("filter ===")
+}
+
+// map
+let number = [Int](1...100)
+
+var newNumber: [Int] = []
+for number in number {
+    newNumber.append(number * 3)
+}
+print(newNumber)
+
+let mapNumber = number.map { $0 * 3 }
+
+print(mapNumber)
+
+
+// 특정 감독의 영화만 출력
+let movieList = [
+    "괴물":"봉준호",
+    "기생충":"봉준호",
+    "옥자":"봉준호",
+    "올드보이":"박찬욱",
+    "설국열차":"봉준호"
+]
+let movieResult = movieList.filter{ $0.value == "봉준호" }.map{ $0.key }
+print(movieResult)
+
+// reduce
+let examScore: [Double] = [100, 100, 100, 80, 30, 20, 10, 100]
+let average = examScore.reduce(0) { $0 + $1 }
+print(average / 8)
+
+
+
+
+// drawingGame: 외부함수, luckeyNumber: 내부함수
+func drawingGame(item: Int) -> String {
+    func luckeyNumber(number: Int) -> String {
+        return "\(number * Int.random(in: 1...10))"
+    }
+    let result = luckeyNumber(number: item)
+    return result
+}
+drawingGame(item: 10) // 외부함수의 생명주기가 끝났다 -> 내부함수의 생명주기도 끝났다!
+
+func drawingGame2(item: Int) -> () -> String {
+    func luckyNumber() -> String {
+        return "\(item * Int.random(in: 1...10))"
+    }
+    return luckyNumber
+}
+
+let numberResult = drawingGame2(item: 10) // 외부 함수 생명주기 끝남
+// 내부함수 실행
+numberResult()

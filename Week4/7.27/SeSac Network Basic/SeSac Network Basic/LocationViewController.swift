@@ -33,6 +33,7 @@ class LocationViewController: UIViewController {
     // Notification
     let notificationCenter = UNUserNotificationCenter.current()
     
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +42,20 @@ class LocationViewController: UIViewController {
         requestAuthorization()
     }
     
+    @IBAction func downloadButton(_ sender: UIButton) {
+        let url = "https://apod.nasa.gov/apod/image/2208/M13_final2_sinfirma.jpg"
+        print("func", Thread.isMainThread)
+        
+        DispatchQueue.global().async {
+            print("global", Thread.isMainThread)
+            let data = try! Data(contentsOf: URL(string: url)!)
+            let image = UIImage(data: data)
+            DispatchQueue.main.async {
+                print("main", Thread.isMainThread)
+                self.imageView.image = image
+            }
+        }
+    }
     // Notification 2.권한 요청
     func requestAuthorization() {
         let authorizationOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
