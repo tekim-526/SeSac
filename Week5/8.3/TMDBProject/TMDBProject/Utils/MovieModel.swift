@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import SwiftyJSON
-import Alamofire
 
 struct MovieModel {
     var movieID: [Int]

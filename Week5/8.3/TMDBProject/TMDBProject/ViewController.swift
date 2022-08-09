@@ -17,7 +17,7 @@ import JGProgressHUD
 class ViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
-    let hud = JGProgressHUD()
+    
     var movieData: MovieModel = MovieModel(movieID: [], imageURL: [], backDropPathURL: [], title: [], overView: [], genre: [])
     var castData: [CastModel] = []
     var trailerData: [TrailerModel] = []
@@ -104,27 +104,40 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController {
+    
     func fillMovieModelData() {
         TMDBAPINetworkManager.shared.fetchMovie { movieData in
             self.movieData = movieData
+            
             for index in 0...movieData.movieID.count - 1 {
-                TMDBAPINetworkManager.shared.fetchCast(movieID: movieData.movieID[index]) { castData in
-                    self.castData = castData
-                    if movieData.movieID.count == self.castData.count  {
-                        //print("movieData.movieID.count == \(movieData.movieID.count)", "탈출")
-                        //reloadData 마지막에 한번만 호출해도 된다
-                        self.mainTableView.reloadData()
-                    
-                    }
-                    
-                }
-                TMDBAPINetworkManager.shared.fetchTrailer(movieID: movieData.movieID[index]) { trailerData in
-                    self.trailerData = trailerData
-                    if movieData.movieID.count == self.trailerData.count  {
-                        self.mainTableView.reloadData()
-                    }
-                }
+                self.fetchCast(movieID: movieData.movieID[index])
+                self.fetchTrailer(movieID: movieData.movieID[index])
+                
             }
+        }
+    }
+    
+    
+    func fetchTrailer(movieID: Int) {
+        TMDBAPINetworkManager.shared.fetchTrailer(movieID: movieID) { trailerData in
+            self.trailerData = trailerData
+            if self.movieData.movieID.count == self.trailerData.count  {
+                print("self.trailerData.count == \(self.trailerData.count)", "탈출")
+                self.mainTableView.reloadData()
+            }
+        }
+    }
+    
+    func fetchCast(movieID: Int) {
+        TMDBAPINetworkManager.shared.fetchCast(movieID: movieID) { castData in
+            self.castData = castData
+            if self.movieData.movieID.count == self.castData.count  {
+                print("self.castData.count == \(self.castData.count)", "탈출")
+                //reloadData 마지막에 한번만 호출해도 된다
+                self.mainTableView.reloadData()
+            
+            }
+            
         }
     }
     
