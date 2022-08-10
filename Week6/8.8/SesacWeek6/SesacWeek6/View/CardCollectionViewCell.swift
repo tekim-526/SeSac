@@ -14,7 +14,13 @@ class CardCollectionViewCell: UICollectionViewCell {
     // 변경되지 않는 UI
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        print("CardCollectionViewCell", #function)
         setupUI()
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cardView.contentLabel.text = nil
     }
     func setupUI() {
         cardView.backgroundColor = .clear

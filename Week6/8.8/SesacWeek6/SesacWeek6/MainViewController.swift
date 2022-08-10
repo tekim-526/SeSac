@@ -6,15 +6,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     
+    var episodeList: [[String]] = []
+    
     let color: [UIColor] = [.orange, .black, .yellow, .tintColor, .green, .magenta]
     let numberList: [[Int]] = [
-        [Int](100...110),
+        [Int](100...140),
         [Int](200...210),
         [Int](300...310),
         [Int](400...410),
@@ -32,9 +35,15 @@ class MainViewController: UIViewController {
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
         
-        bannerCollectionView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CardCollectionViewCell")
+        bannerCollectionView.register(UINib(nibName: CardCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CardCollectionViewCell.reuseIdentifier)
         bannerCollectionView.collectionViewLayout = collectionViewLayout()
         bannerCollectionView.isPagingEnabled = true
+        
+        TMDBAPIManager.shared.requestImage { value in
+            self.episodeList = value
+
+            self.mainTableView.reloadData()
+        }
     }
     
 
@@ -44,25 +53,30 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return numberList.count
+        
+        return episodeList.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
+       
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseIdentifier, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
         cell.backgroundColor = .green
         
+        cell.titleLabel.text = TMDBAPIManager.shared.tvList[indexPath.section].0
         
         cell.contentCollectionView.delegate = self
         cell.contentCollectionView.dataSource = self
         cell.contentCollectionView.tag = indexPath.section
-        cell.contentCollectionView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CardCollectionViewCell")
+        print("indexPath.section",indexPath.section)
+        cell.contentCollectionView.register(UINib(nibName: CardCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CardCollectionViewCell.reuseIdentifier)
+        cell.contentCollectionView.reloadData()
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 2 ? 350 : 190
+        return 240
     }
     
 }
@@ -70,17 +84,25 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 // 하나의 프로토콜, 메서드에서 여러 컬렉션뷰의 delegate, datasource 구현해야함
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionView == bannerCollectionView ? color.count : numberList[collectionView.tag].count
+        return collectionView == bannerCollectionView ? color.count : episodeList[collectionView.tag].count
     }
-    
+    // bannerCollectionView || 테이블 뷰 안에 있는 컬렉션뷰
+    // 내부 매개변수가 아닌 명확한 아웃렛을 사용할 경우, 셀이 재사용 되면 특정 collcetionView 셀을 재사용하게 될 수 있음
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
+
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.reuseIdentifier, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
+        
         if collectionView == bannerCollectionView {
             cell.cardView.posterImageView.backgroundColor = color[indexPath.row]
         } else {
             cell.cardView.posterImageView.backgroundColor = .black
-            cell.cardView.contentLabel.text = "\(numberList[collectionView.tag][indexPath.item])"
             cell.cardView.contentLabel.textColor = .white
+            
+            let url = URL(string: "\(TMDBAPIManager.shared.imageURL)\(episodeList[collectionView.tag][indexPath.item])")
+            cell.cardView.posterImageView.kf.setImage(with: url)
+            cell.cardView.contentLabel.text = ""
+           
+            
         }
         
         return cell

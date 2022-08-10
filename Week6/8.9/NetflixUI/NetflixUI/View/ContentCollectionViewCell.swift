@@ -16,6 +16,6 @@ class ContentCollectionViewCell: UICollectionViewCell {
         // Initialization code
         
     }
-    
+  
 }
 

@@ -11,6 +11,7 @@ class ContentTableViewCell: UITableViewCell {
 
     @IBOutlet weak var contentCollectionView: UICollectionView!
     @IBOutlet weak var categoryLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         

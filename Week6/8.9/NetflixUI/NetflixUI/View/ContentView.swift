@@ -15,7 +15,7 @@ class ContentView: UIView {
         super.init(coder: coder)
         guard let view = UINib(nibName: "ContentView", bundle: nil).instantiate(withOwner: self).first as? UIView else { return }
         view.frame = bounds
-        view.backgroundColor = .lightGray
+        
         self.addSubview(view)
     }
 

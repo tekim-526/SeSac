@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wiH-Qd-V5F">
-                    <rect key="frame" x="8" y="0.0" width="318" height="624"/>
+                    <rect key="frame" x="8" y="8" width="310" height="608"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3A-et-IMi">
                     <rect key="frame" x="20" y="20" width="286" height="21"/>
@@ -30,13 +30,13 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="wiH-Qd-V5F" secondAttribute="trailing" id="52c-z6-t41"/>
+                <constraint firstItem="wiH-Qd-V5F" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="CAp-pq-v6b"/>
                 <constraint firstItem="w3A-et-IMi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Wrn-2r-BOZ"/>
-                <constraint firstItem="wiH-Qd-V5F" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fxk-tS-ZSa"/>
-                <constraint firstAttribute="bottom" secondItem="wiH-Qd-V5F" secondAttribute="bottom" id="jKc-da-r7C"/>
-                <constraint firstItem="wiH-Qd-V5F" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="pNL-Zp-9zs"/>
+                <constraint firstAttribute="trailing" secondItem="wiH-Qd-V5F" secondAttribute="trailing" constant="8" id="pt2-6I-prP"/>
                 <constraint firstAttribute="trailing" secondItem="w3A-et-IMi" secondAttribute="trailing" constant="20" id="qvv-Be-m8y"/>
                 <constraint firstItem="w3A-et-IMi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="sl8-uE-L1r"/>
+                <constraint firstAttribute="bottom" secondItem="wiH-Qd-V5F" secondAttribute="bottom" constant="8" id="vGV-HY-Ajv"/>
+                <constraint firstItem="wiH-Qd-V5F" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="wKF-hq-v95"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="68.115942028985515" y="39.508928571428569"/>

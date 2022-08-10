@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieModel {
+struct MovieModel: Equatable {
     var movieID: [Int]?
     var imageURL: [URL?]
     var backDropPathURL: [URL?]?
