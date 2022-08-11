@@ -18,6 +18,7 @@ class TheaterViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     var annotationList: [MKPointAnnotation] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -111,20 +112,15 @@ class TheaterViewController: UIViewController {
     func showActionSheet() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let cancel = UIAlertAction(title: "취소", style: .cancel)
-        let lotteCinemaAction = alertActions(title: "롯데시네마")
-        let megaboxAction = alertActions(title: "메가박스")
-        let cgvAction = alertActions(title: "CGV")
-        let allAction = alertActions(title: "전체보기")
         
-        alert.addAction(lotteCinemaAction)
-        alert.addAction(megaboxAction)
-        alert.addAction(cgvAction)
-        alert.addAction(allAction)
+        
+        alert.addAction(alertActions(title: "롯데시네마"))
+        alert.addAction(alertActions(title: "메가박스"))
+        alert.addAction(alertActions(title: "CGV"))
+        alert.addAction(alertActions(title: "전체보기"))
         alert.addAction(cancel)
         present(alert, animated: true) {
-            self.theaterAnnotation()
             self.mapKitView.reloadInputViews()
-            
         }
         
     }
@@ -132,11 +128,16 @@ class TheaterViewController: UIViewController {
     func alertActions(title: String) -> UIAlertAction {
         
         let action = UIAlertAction(title: title, style: .default) { _ in
-            let annotations = self.annotationList.filter { annotation in
-                return annotation.title!.contains(title)
+            
+            let annotationsWillRemoved = self.annotationList.filter { annotation in
+                return title == "전체보기" ? annotation.title!.contains(title) : !annotation.title!.contains(title)
             }
             
-            self.mapKitView.removeAnnotations(annotations)
+            let annotaionsWillShowed = self.annotationList.filter{ annotation in
+                return title == "전체보기" ? !annotation.title!.contains(title) : annotation.title!.contains(title)
+            }
+            self.mapKitView.addAnnotations(annotaionsWillShowed)
+            self.mapKitView.removeAnnotations(annotationsWillRemoved)
         }
         return action
     }
