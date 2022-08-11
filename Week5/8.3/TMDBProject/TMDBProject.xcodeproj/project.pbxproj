@@ -15,6 +15,9 @@
 		934CB5312899F6C500E54B35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934CB5302899F6C500E54B35 /* Assets.xcassets */; };
 		934CB5342899F6C500E54B35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934CB5322899F6C500E54B35 /* LaunchScreen.storyboard */; };
 		934CB53C2899F98100E54B35 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934CB53B2899F98100E54B35 /* APIKey.swift */; };
+		9360FB0228A4C86200DC9FA2 /* TheaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9360FB0128A4C86200DC9FA2 /* TheaterViewController.swift */; };
+		9360FB0428A4C87D00DC9FA2 /* Theater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9360FB0328A4C87D00DC9FA2 /* Theater.storyboard */; };
+		9360FB0728A4CC4400DC9FA2 /* TheaterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9360FB0628A4CC4400DC9FA2 /* TheaterModel.swift */; };
 		938BFAB6289A84530019E237 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 938BFAB5289A84530019E237 /* SwiftyJSON */; };
 		938BFAB9289A845E0019E237 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 938BFAB8289A845E0019E237 /* Alamofire */; };
 		938BFABC289A846B0019E237 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 938BFABB289A846B0019E237 /* Kingfisher */; };
@@ -41,6 +44,9 @@
 		934CB5332899F6C500E54B35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		934CB5352899F6C500E54B35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		934CB53B2899F98100E54B35 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		9360FB0128A4C86200DC9FA2 /* TheaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterViewController.swift; sourceTree = "<group>"; };
+		9360FB0328A4C87D00DC9FA2 /* Theater.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Theater.storyboard; sourceTree = "<group>"; };
+		9360FB0628A4CC4400DC9FA2 /* TheaterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterModel.swift; sourceTree = "<group>"; };
 		938BFABD289A86290019E237 /* TMDBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTableViewCell.swift; sourceTree = "<group>"; };
 		938BFABE289A86290019E237 /* TMDBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TMDBTableViewCell.xib; sourceTree = "<group>"; };
 		938BFAC2289A87E90019E237 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 				938BFADD289C15590019E237 /* PopUpViewController.swift */,
 				938BFAD5289BBB850019E237 /* MovieDetailViewController.swift */,
 				938BFAD9289C0AFE0019E237 /* CastTableViewCell.swift */,
+				9360FB0528A4C88100DC9FA2 /* Theater */,
 				938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */,
 				934CB52D2899F6C200E54B35 /* Main.storyboard */,
 				93ECA92928A00448003A0F79 /* YoutubeWebViewController.swift */,
@@ -104,6 +111,16 @@
 				934CB5352899F6C500E54B35 /* Info.plist */,
 			);
 			path = TMDBProject;
+			sourceTree = "<group>";
+		};
+		9360FB0528A4C88100DC9FA2 /* Theater */ = {
+			isa = PBXGroup;
+			children = (
+				9360FB0128A4C86200DC9FA2 /* TheaterViewController.swift */,
+				9360FB0628A4CC4400DC9FA2 /* TheaterModel.swift */,
+				9360FB0328A4C87D00DC9FA2 /* Theater.storyboard */,
+			);
+			path = Theater;
 			sourceTree = "<group>";
 		};
 		938BFAC1289A87D70019E237 /* Utils */ = {
@@ -190,6 +207,7 @@
 				934CB5342899F6C500E54B35 /* LaunchScreen.storyboard in Resources */,
 				938BFADC289C0AFE0019E237 /* CastTableViewCell.xib in Resources */,
 				934CB5312899F6C500E54B35 /* Assets.xcassets in Resources */,
+				9360FB0428A4C87D00DC9FA2 /* Theater.storyboard in Resources */,
 				934CB52F2899F6C200E54B35 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +226,9 @@
 				934CB5282899F6C200E54B35 /* AppDelegate.swift in Sources */,
 				938BFAD6289BBB860019E237 /* MovieDetailViewController.swift in Sources */,
 				938BFADE289C15590019E237 /* PopUpViewController.swift in Sources */,
+				9360FB0728A4CC4400DC9FA2 /* TheaterModel.swift in Sources */,
 				934CB53C2899F98100E54B35 /* APIKey.swift in Sources */,
+				9360FB0228A4C86200DC9FA2 /* TheaterViewController.swift in Sources */,
 				930CB580289CE54500BE00F0 /* TMDBAPINetworkManager.swift in Sources */,
 				934CB52A2899F6C200E54B35 /* SceneDelegate.swift in Sources */,
 				938BFAC3289A87E90019E237 /* Utils.swift in Sources */,

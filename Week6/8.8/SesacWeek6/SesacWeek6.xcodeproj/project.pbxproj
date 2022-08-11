@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9321081828A49394006FD058 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9321081728A49394006FD058 /* MapViewController.swift */; };
 		93ECA93828A08FF0003A0F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ECA93728A08FF0003A0F79 /* AppDelegate.swift */; };
 		93ECA93A28A08FF0003A0F79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ECA93928A08FF0003A0F79 /* SceneDelegate.swift */; };
 		93ECA93C28A08FF0003A0F79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ECA93B28A08FF0003A0F79 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9321081728A49394006FD058 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		93ECA93428A08FF0003A0F79 /* SesacWeek6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SesacWeek6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93ECA93728A08FF0003A0F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93ECA93928A08FF0003A0F79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				93ECA93928A08FF0003A0F79 /* SceneDelegate.swift */,
 				93ECA93B28A08FF0003A0F79 /* ViewController.swift */,
 				93ECA93D28A08FF0003A0F79 /* Main.storyboard */,
+				9321081728A49394006FD058 /* MapViewController.swift */,
 				93ECA96E28A1FC92003A0F79 /* MainTableViewCell.swift */,
 				93ECA96A28A1F635003A0F79 /* MainViewController.swift */,
 				93ECA95D28A0ABE6003A0F79 /* ClosureViewController.swift */,
@@ -237,6 +240,7 @@
 				93ECA93A28A08FF0003A0F79 /* SceneDelegate.swift in Sources */,
 				93ECA9BD28A343E3003A0F79 /* TMDBAPIManager.swift in Sources */,
 				93ECA95A28A09518003A0F79 /* URL+Extension.swift in Sources */,
+				9321081828A49394006FD058 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +395,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +424,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

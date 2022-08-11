@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Theater View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TheaterViewController" id="Y6W-OH-hqX" customClass="TheaterViewController" customModule="TMDBProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vq6-3N-aaF">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzg-rt-znX">
+                                <rect key="frame" x="0.0" y="44" width="390" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="vq6-3N-aaF" firstAttribute="top" secondItem="Gzg-rt-znX" secondAttribute="bottom" id="3lf-Ta-HgS"/>
+                            <constraint firstItem="vq6-3N-aaF" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="EcM-uc-Pwg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gzg-rt-znX" secondAttribute="trailing" id="Hom-JW-qrl"/>
+                            <constraint firstItem="vq6-3N-aaF" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="PSf-Wt-rBP"/>
+                            <constraint firstItem="vq6-3N-aaF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gJg-Id-gqL"/>
+                            <constraint firstItem="Gzg-rt-znX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="myf-7C-SO1"/>
+                            <constraint firstItem="Gzg-rt-znX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ym8-jF-0bs"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="p7u-ON-f4p" appends="YES" id="Rgf-8i-ISA"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="Gzg-rt-znX" id="EAd-hs-UE8"/>
+                        <outlet property="mapKitView" destination="vq6-3N-aaF" id="UT4-Ol-Wjj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="p7u-ON-f4p">
+                    <connections>
+                        <action selector="viewTapped:" destination="Y6W-OH-hqX" id="puy-JD-k2P"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="130.76923076923077" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

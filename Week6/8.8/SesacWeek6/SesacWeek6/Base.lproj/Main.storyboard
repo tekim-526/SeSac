@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8oA-FM-hqE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QWF-8L-6NZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -22,7 +24,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="KakaoCell" rowHeight="213" id="TN8-S3-Snp" customClass="KakaoCell" customModule="SesacWeek6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="213"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="213"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TN8-S3-Snp" id="kv6-6e-gyY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
@@ -208,7 +210,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" rowHeight="277" id="ALd-d4-Md5" customClass="MainTableViewCell" customModule="SesacWeek6" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="277"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="277"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ALd-d4-Md5" id="xaW-bv-DMQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="277"/>
@@ -285,6 +287,36 @@
             </objects>
             <point key="canvasLocation" x="2655.072463768116" y="97.767857142857139"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="8yB-HY-X6w">
+            <objects>
+                <viewController id="QWF-8L-6NZ" customClass="MapViewController" customModule="SesacWeek6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lOg-J5-BAN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVd-fg-lpE">
+                                <rect key="frame" x="0.0" y="235" width="414" height="627"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kwo-yJ-481"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kwo-yJ-481" firstAttribute="trailing" secondItem="IVd-fg-lpE" secondAttribute="trailing" id="e4V-g5-fl7"/>
+                            <constraint firstItem="IVd-fg-lpE" firstAttribute="leading" secondItem="kwo-yJ-481" secondAttribute="leading" id="il0-aE-z03"/>
+                            <constraint firstItem="IVd-fg-lpE" firstAttribute="height" secondItem="lOg-J5-BAN" secondAttribute="height" multiplier="0.7" id="rck-Fw-qO4"/>
+                            <constraint firstItem="kwo-yJ-481" firstAttribute="bottom" secondItem="IVd-fg-lpE" secondAttribute="bottom" id="wPy-hc-23o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="IVd-fg-lpE" id="X3k-eK-EQX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ex-Zh-gyv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3426" y="98"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3SJ-Pf-Aak">
             <objects>
@@ -306,7 +338,7 @@
     </scenes>
     <designables>
         <designable name="C6O-Bx-7uH">
-            <size key="intrinsicContentSize" width="67" height="31"/>
+            <size key="intrinsicContentSize" width="75" height="34.5"/>
         </designable>
     </designables>
     <resources>
