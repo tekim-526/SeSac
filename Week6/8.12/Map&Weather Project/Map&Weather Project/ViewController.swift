@@ -12,16 +12,19 @@ import Kingfisher
 
 class ViewController: UIViewController {
 
+    // MARK: - Properties
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var weatherImageView: UIImageView!
     let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
         checkDeviceLocationAuth()
     }
     
+    // MARK: - Methods
     func mapViewSetUp(center: CLLocationCoordinate2D) {
 
         let region = MKCoordinateRegion(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
@@ -31,6 +34,7 @@ class ViewController: UIViewController {
         mapView.addAnnotation(annotation)
         mapView.setRegion(region, animated: true)
     }
+    
     func checkDeviceLocationAuth() {
         let authStatus: CLAuthorizationStatus
         
@@ -48,6 +52,7 @@ class ViewController: UIViewController {
             showAlert()
         }
     }
+    
     func checkAppLocationAuth(authStatus: CLAuthorizationStatus) {
         switch authStatus {
         case .notDetermined:
@@ -65,6 +70,7 @@ class ViewController: UIViewController {
         default: print("DEFAULT")
         }
     }
+    
     func showAlert() {
         let alert = UIAlertController(title: "권한 주세요", message: nil, preferredStyle: .alert)
         let action = UIAlertAction(title: "설정으로 가기", style: .destructive) {_ in
@@ -80,6 +86,7 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         locationManager.startUpdatingLocation()
@@ -97,8 +104,7 @@ extension ViewController: CLLocationManagerDelegate {
                 self.weatherImageView.kf.setImage(with: url)
                 self.weatherImageView.contentMode = .scaleAspectFill
                 self.weatherImageView.reloadInputViews()
-                self.weatherLabel.text = "현재온도 \(info.temp.rounded())\n오늘 최고기온\(info.temp_max.rounded())\n오늘 최저기온\(info.temp_min.rounded())"
-                
+                self.weatherLabel.text = "기준 지역 \(info.country)\n현재 온도 \(info.temp.rounded())\n현재 습도 \(info.humidity)"
             }
         }
         locationManager.stopUpdatingLocation()
