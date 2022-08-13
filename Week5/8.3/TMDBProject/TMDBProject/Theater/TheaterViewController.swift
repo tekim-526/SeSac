@@ -126,13 +126,10 @@ class TheaterViewController: UIViewController {
     }
 
     func alertActions(title: String) -> UIAlertAction {
-        
         let action = UIAlertAction(title: title, style: .default) { _ in
-            
             let annotationsWillRemoved = self.annotationList.filter { annotation in
                 return title == "전체보기" ? annotation.title!.contains(title) : !annotation.title!.contains(title)
             }
-            
             let annotaionsWillShowed = self.annotationList.filter{ annotation in
                 return title == "전체보기" ? !annotation.title!.contains(title) : annotation.title!.contains(title)
             }

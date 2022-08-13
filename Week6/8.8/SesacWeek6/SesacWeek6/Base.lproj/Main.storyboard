@@ -317,6 +317,120 @@
             </objects>
             <point key="canvasLocation" x="3426" y="98"/>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="M7N-I7-1VY">
+            <objects>
+                <viewController id="5oi-c5-6Br" customClass="CameraViewController" customModule="SesacWeek6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5fl-bO-UoB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cno-ew-abB">
+                                <rect key="frame" x="20" y="64" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6G0-l8-07w"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="카메라"/>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="5oi-c5-6Br" eventType="touchUpInside" id="5gb-jN-ROI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STZ-Rt-BxN">
+                                <rect key="frame" x="20" y="134" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="io5-LA-inC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="갤러리"/>
+                                <connections>
+                                    <action selector="photoLibraryButtonTapped:" destination="5oi-c5-6Br" eventType="touchUpInside" id="Yqe-fM-mir"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ft-1M-ZGH">
+                                <rect key="frame" x="20" y="204" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sp5-Hv-mNi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="YPImagePicker"/>
+                                <connections>
+                                    <action selector="ypImagePickerButtonTapped:" destination="5oi-c5-6Br" eventType="touchUpInside" id="UAB-Is-f8X"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hmx-pB-GcY">
+                                <rect key="frame" x="20" y="274" width="374" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ksE-1w-1ic"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJs-Vf-36K">
+                                <rect key="frame" x="20" y="444" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="X8r-LB-D3z"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save To Photo Library"/>
+                                <connections>
+                                    <action selector="saveToPhotoLibraryButtonTapped:" destination="5oi-c5-6Br" eventType="touchUpInside" id="bwG-bm-C6t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BG0-8J-ktd">
+                                <rect key="frame" x="20" y="514" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="olW-s9-CIH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clova Face / Celebrity"/>
+                                <connections>
+                                    <action selector="clovaFaceButtonTapped:" destination="5oi-c5-6Br" eventType="touchUpInside" id="otb-iv-Toc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSO-73-Prn">
+                                <rect key="frame" x="20" y="584" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Gk9-zE-H4j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jhM-6r-XGg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hmx-pB-GcY" firstAttribute="leading" secondItem="jhM-6r-XGg" secondAttribute="leading" constant="20" id="0oy-wL-n20"/>
+                            <constraint firstItem="CJs-Vf-36K" firstAttribute="top" secondItem="hmx-pB-GcY" secondAttribute="bottom" constant="20" id="30H-qI-uHc"/>
+                            <constraint firstItem="jhM-6r-XGg" firstAttribute="trailing" secondItem="STZ-Rt-BxN" secondAttribute="trailing" constant="20" id="4HE-Z7-rD1"/>
+                            <constraint firstItem="jhM-6r-XGg" firstAttribute="trailing" secondItem="QSO-73-Prn" secondAttribute="trailing" constant="20" id="50S-Vg-Ern"/>
+                            <constraint firstItem="QSO-73-Prn" firstAttribute="leading" secondItem="jhM-6r-XGg" secondAttribute="leading" constant="20" id="7vP-kj-odu"/>
+                            <constraint firstItem="BG0-8J-ktd" firstAttribute="top" secondItem="CJs-Vf-36K" secondAttribute="bottom" constant="20" id="D6d-el-zwL"/>
+                            <constraint firstItem="jhM-6r-XGg" firstAttribute="trailing" secondItem="BG0-8J-ktd" secondAttribute="trailing" constant="20" id="DDd-kz-pyi"/>
+                            <constraint firstItem="STZ-Rt-BxN" firstAttribute="leading" secondItem="jhM-6r-XGg" secondAttribute="leading" constant="20" id="GGy-ta-6kP"/>
+                            <constraint firstItem="cno-ew-abB" firstAttribute="leading" secondItem="jhM-6r-XGg" secondAttribute="leading" constant="20" id="OyT-ES-ybR"/>
+                            <constraint firstItem="QSO-73-Prn" firstAttribute="top" secondItem="BG0-8J-ktd" secondAttribute="bottom" constant="20" id="Qv1-H1-ejh"/>
+                            <constraint firstItem="jhM-6r-XGg" firstAttribute="trailing" secondItem="hmx-pB-GcY" secondAttribute="trailing" constant="20" id="Xvt-dO-1IK"/>
+                            <constraint firstItem="CJs-Vf-36K" firstAttribute="leading" secondItem="jhM-6r-XGg" secondAttribute="leading" constant="20" id="aTs-Uq-khB"/>
+                            <constraint firstItem="hmx-pB-GcY" firstAttribute="top" secondItem="9Ft-1M-ZGH" secondAttribute="bottom" constant="20" id="gCc-1p-clx"/>
+                            <constraint firstItem="STZ-Rt-BxN" firstAttribute="top" secondItem="cno-ew-abB" secondAttribute="bottom" constant="20" id="hop-BV-Rcn"/>
+                            <constraint firstItem="9Ft-1M-ZGH" firstAttribute="leading" secondItem="jhM-6r-XGg" secondAttribute="leading" constant="20" id="k8z-or-ssn"/>
+                            <constraint firstItem="jhM-6r-XGg" firstAttribute="trailing" secondItem="cno-ew-abB" secondAttribute="trailing" constant="20" id="lwQ-1z-oNj"/>
+                            <constraint firstItem="jhM-6r-XGg" firstAttribute="trailing" secondItem="9Ft-1M-ZGH" secondAttribute="trailing" constant="20" id="mVG-8x-uPv"/>
+                            <constraint firstItem="9Ft-1M-ZGH" firstAttribute="top" secondItem="STZ-Rt-BxN" secondAttribute="bottom" constant="20" id="pYk-5C-3hM"/>
+                            <constraint firstItem="BG0-8J-ktd" firstAttribute="leading" secondItem="jhM-6r-XGg" secondAttribute="leading" constant="20" id="quy-DA-gPx"/>
+                            <constraint firstItem="jhM-6r-XGg" firstAttribute="trailing" secondItem="CJs-Vf-36K" secondAttribute="trailing" constant="20" id="scs-MY-5NJ"/>
+                            <constraint firstItem="cno-ew-abB" firstAttribute="top" secondItem="jhM-6r-XGg" secondAttribute="top" constant="20" id="tBR-HV-sFQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="hmx-pB-GcY" id="P7v-Wi-fGL"/>
+                        <outlet property="resultLabel" destination="QSO-73-Prn" id="Aif-Wf-Yzu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vee-6U-0BY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4246" y="98"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3SJ-Pf-Aak">
             <objects>
