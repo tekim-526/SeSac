@@ -7,8 +7,6 @@
 
 import UIKit
 
-import Alamofire
-import SwiftyJSON
 import YPImagePicker
 
 class CameraViewController: UIViewController {
@@ -63,39 +61,16 @@ class CameraViewController: UIViewController {
         }
         present(picker, animated: true, completion: nil)
     }
+    
     @IBAction func saveToPhotoLibraryButtonTapped(_ sender: UIButton) {
         if let image = resultImageView.image {
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         }
     }
     
-    // 이미지 뷰 이미지 > 네이버 > 얼굴 분석 요청 > 응답
-    // 문자열이 아닌 파일, 이미지, pdf 파일 자체가 그대로 전송 되지 않음. => 텍스트 형태로 인코딩
-    // 어떤 파일의 종류가 서버에게 전달이 되는 지 명시 = Content-Type
-    
     @IBAction func clovaFaceButtonTapped(_ sender: UIButton) {
-        let url = "https://openapi.naver.com/v1/vision/celebrity"
-        let header: HTTPHeaders = [
-            "X-Naver-Client-Id" : "RrD8naCcIvoWUo1n0zYD",
-            "X-Naver-Client-Secret" : "sAK7mnj7Cq",
-            "Content-Type" : "multipart/form-data"
-        ]
-        
-        // UIImage를 텍스트 형태(바이너리 타입)로 변환해야 함
-        guard let imageData = resultImageView.image?.jpegData(compressionQuality: 0.25) else { return }
-        AF.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(imageData, withName: "image")
-        }, to: url, headers: header)
-        .validate(statusCode: 200...500).responseData { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("\n", json)
-                print(json["faces"][0]["celebrity"]["value"])
-                self.resultLabel.text = json["faces"][0]["celebrity"]["value"].stringValue
-            case .failure(let error):
-                print(error)
-            }
+        ClovaAPIManager.getCelebrityInfo(sourceImage: resultImageView) { value in
+            self.resultLabel.text = value
         }
     }
 }

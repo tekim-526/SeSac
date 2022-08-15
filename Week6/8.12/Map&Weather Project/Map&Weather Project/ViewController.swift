@@ -104,7 +104,7 @@ extension ViewController: CLLocationManagerDelegate {
                 self.weatherImageView.kf.setImage(with: url)
                 self.weatherImageView.contentMode = .scaleAspectFill
                 self.weatherImageView.reloadInputViews()
-                self.weatherLabel.text = "기준 지역 \(info.country)\n현재 온도 \(info.temp.rounded())\n현재 습도 \(info.humidity)"
+                self.weatherLabel.text = "기준 지역 \(info.country)\n현재 온도 \(info.temp.rounded())\n현재 습도 \(info.humidity)     풍속 \(info.windSpeed)"
             }
         }
         locationManager.stopUpdatingLocation()

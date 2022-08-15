@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9321081828A49394006FD058 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9321081728A49394006FD058 /* MapViewController.swift */; };
+		9351DB8228A9F491000C7C74 /* ClovaAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351DB8128A9F491000C7C74 /* ClovaAPIManager.swift */; };
 		936B92BD28A5D6810027D57D /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 936B92BC28A5D6810027D57D /* YPImagePicker */; };
 		936B92BF28A5DD150027D57D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936B92BE28A5DD150027D57D /* CameraViewController.swift */; };
 		93ECA93828A08FF0003A0F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ECA93728A08FF0003A0F79 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		9321081728A49394006FD058 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9351DB8128A9F491000C7C74 /* ClovaAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClovaAPIManager.swift; sourceTree = "<group>"; };
 		936B92BE28A5DD150027D57D /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		93ECA93428A08FF0003A0F79 /* SesacWeek6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SesacWeek6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93ECA93728A08FF0003A0F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				93ECA95928A09518003A0F79 /* URL+Extension.swift */,
 				93ECA95B28A0A78C003A0F79 /* KakaoAPIManager.swift */,
 				93ECA9BC28A343E3003A0F79 /* TMDBAPIManager.swift */,
+				9351DB8128A9F491000C7C74 /* ClovaAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				93ECA95828A094A8003A0F79 /* EndPoint.swift in Sources */,
 				93ECA96528A1E664003A0F79 /* CardView.swift in Sources */,
 				93ECA9BB28A3307E003A0F79 /* ReusableProtocol.swift in Sources */,
+				9351DB8228A9F491000C7C74 /* ClovaAPIManager.swift in Sources */,
 				93ECA95528A090FD003A0F79 /* APIKey.swift in Sources */,
 				93ECA96128A1E031003A0F79 /* SeSACButton.swift in Sources */,
 				93ECA95C28A0A78C003A0F79 /* KakaoAPIManager.swift in Sources */,
