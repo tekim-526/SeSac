@@ -30,6 +30,9 @@
 		938BFADB289C0AFE0019E237 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFAD9289C0AFE0019E237 /* CastTableViewCell.swift */; };
 		938BFADC289C0AFE0019E237 /* CastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */; };
 		938BFADE289C15590019E237 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BFADD289C15590019E237 /* PopUpViewController.swift */; };
+		93B5921C28AB6230004F9BD4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5921B28AB6230004F9BD4 /* PageViewController.swift */; };
+		93B5921E28AB624F004F9BD4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5921D28AB624F004F9BD4 /* FirstViewController.swift */; };
+		93B5922028AB6258004F9BD4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5921F28AB6258004F9BD4 /* SecondViewController.swift */; };
 		93ECA92A28A00448003A0F79 /* YoutubeWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ECA92928A00448003A0F79 /* YoutubeWebViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		938BFAD9289C0AFE0019E237 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
 		938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastTableViewCell.xib; sourceTree = "<group>"; };
 		938BFADD289C15590019E237 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		93B5921B28AB6230004F9BD4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		93B5921D28AB624F004F9BD4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		93B5921F28AB6258004F9BD4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		93ECA92928A00448003A0F79 /* YoutubeWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeWebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +109,9 @@
 				9360FB0528A4C88100DC9FA2 /* Theater */,
 				938BFADA289C0AFE0019E237 /* CastTableViewCell.xib */,
 				934CB52D2899F6C200E54B35 /* Main.storyboard */,
+				93B5921B28AB6230004F9BD4 /* PageViewController.swift */,
+				93B5921D28AB624F004F9BD4 /* FirstViewController.swift */,
+				93B5921F28AB6258004F9BD4 /* SecondViewController.swift */,
 				93ECA92928A00448003A0F79 /* YoutubeWebViewController.swift */,
 				938BFABD289A86290019E237 /* TMDBTableViewCell.swift */,
 				938BFABE289A86290019E237 /* TMDBTableViewCell.xib */,
@@ -220,15 +229,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				938BFAD4289B92B70019E237 /* MovieModel.swift in Sources */,
+				93B5922028AB6258004F9BD4 /* SecondViewController.swift in Sources */,
 				934CB52C2899F6C200E54B35 /* ViewController.swift in Sources */,
 				938BFABF289A86290019E237 /* TMDBTableViewCell.swift in Sources */,
 				93ECA92A28A00448003A0F79 /* YoutubeWebViewController.swift in Sources */,
 				934CB5282899F6C200E54B35 /* AppDelegate.swift in Sources */,
 				938BFAD6289BBB860019E237 /* MovieDetailViewController.swift in Sources */,
+				93B5921C28AB6230004F9BD4 /* PageViewController.swift in Sources */,
 				938BFADE289C15590019E237 /* PopUpViewController.swift in Sources */,
 				9360FB0728A4CC4400DC9FA2 /* TheaterModel.swift in Sources */,
 				934CB53C2899F98100E54B35 /* APIKey.swift in Sources */,
 				9360FB0228A4C86200DC9FA2 /* TheaterViewController.swift in Sources */,
+				93B5921E28AB624F004F9BD4 /* FirstViewController.swift in Sources */,
 				930CB580289CE54500BE00F0 /* TMDBAPINetworkManager.swift in Sources */,
 				934CB52A2899F6C200E54B35 /* SceneDelegate.swift in Sources */,
 				938BFAC3289A87E90019E237 /* Utils.swift in Sources */,

@@ -22,6 +22,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var overViewLabel: UILabel!
     @IBOutlet weak var overViewbutton: UIButton!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         castTableView.register(UINib(nibName: "CastTableViewCell", bundle: nil), forCellReuseIdentifier: "CastTableViewCell")
@@ -36,6 +37,7 @@ class MovieDetailViewController: UIViewController {
     @IBAction func overViewButtonTapped(_ sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         guard let vc = sb.instantiateViewController(withIdentifier: "PopUpViewController") as? PopUpViewController else { return }
+        
         vc.modalPresentationStyle = .formSheet
         vc.titleText = movieData.title[section]
         vc.overviewText = movieData.overView[section]
@@ -47,7 +49,7 @@ class MovieDetailViewController: UIViewController {
         titleLabel.font = .systemFont(ofSize: 24, weight: .bold)
         titleLabel.textColor = .white
         
-        overViewLabel.numberOfLines = 2
+        overViewLabel.numberOfLines = 0
         overViewLabel.text = movieData.overView[section]
         
         overViewbutton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
@@ -67,8 +69,8 @@ extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //cell xib로
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CastTableViewCell.reuseIdentifier, for: indexPath) as? CastTableViewCell else { return UITableViewCell() }
-        cell.castImageView.kf.setImage(with: castData[indexPath.row].profileImageURL)
-        
+        cell.castImageView.kf.setImage(with: castData[indexPath.row + section * 10].profileImageURL)
+       
         cell.castLabel.text = castData[indexPath.row + section * 10].cast
         cell.characterLabel.text = castData[indexPath.row + section * 10].charactar
         cell.characterLabel.textColor = .lightGray

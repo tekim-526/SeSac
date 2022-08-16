@@ -23,10 +23,10 @@ import SwiftyJSON
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var blogList: [String] = []
-    var cafeList: [String] = []
+    private var blogList: [String] = []
+    private var cafeList: [String] = []
     
-    var isExpanded = false
+    private var isExpanded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         searchBlog()
     }
     
-    func searchBlog() {
+    private func searchBlog() {
         KakaoAPIManager.shared.callRequest(type: .blog, query: "고래밥") { json in
             for item in json["documents"].arrayValue {
                 let value = item["contents"].stringValue.replacingOccurrences(of: "</b>", with: "").replacingOccurrences(of: "<b>", with: "")
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func searchCafe() {
+    private func searchCafe() {
         KakaoAPIManager.shared.callRequest(type: .cafe, query: "고래밥") { json in
             for item in json["documents"].arrayValue {
                 

@@ -10,13 +10,19 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+struct User {
+    fileprivate let name = "tekim"
+    private let age = 11
+}
+
+
 
 class KakaoAPIManager {
     static let shared = KakaoAPIManager()
 
     private init() {}
     
-    let header: HTTPHeaders = ["Authorization": "KakaoAK \(APIKey.Kakao_API_Key)"]
+    private let header: HTTPHeaders = ["Authorization": "KakaoAK \(APIKey.Kakao_API_Key)"]
     
     func callRequest(type: EndPoint,query: String, completionHandler: @escaping (JSON) -> ()) {
         guard let text = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }

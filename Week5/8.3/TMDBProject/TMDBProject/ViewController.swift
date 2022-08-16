@@ -18,30 +18,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mainTableView: UITableView!
     
-    var movieData: MovieModel = MovieModel(movieID: [], imageURL: [], backDropPathURL: [], title: [], overView: [], genre: [])
-    var castData: [CastModel] = []
-    var trailerData: [TrailerModel] = []
+    private var movieData: MovieModel = MovieModel(movieID: [], imageURL: [], backDropPathURL: [], title: [], overView: [], genre: [])
+    private var castData: [CastModel] = []
+    private var trailerData: [TrailerModel] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mainTableView.delegate = self
         mainTableView.dataSource = self
-        
         mainTableView.rowHeight = UIScreen.main.bounds.height / 2.5
-        navigationController?.isNavigationBarHidden = true
         mainTableView.register(UINib(nibName: TMDBTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: TMDBTableViewCell.reuseIdentifier)
         
+        navigationItem.hidesBackButton = true
         fillMovieModelData()
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        navigationController?.isNavigationBarHidden = true
-    }
     
-    
-    func configureCell(cell: TMDBTableViewCell, item: Int) {
+    private func configureCell(cell: TMDBTableViewCell, item: Int) {
         cell.navigation = navigationController
         cell.trailerURL = trailerData[item].trailerLink
         
@@ -70,8 +64,12 @@ class ViewController: UIViewController {
 
         cell.youtubeLinkButton.backgroundColor = .white
         cell.youtubeLinkButton.layer.cornerRadius = cell.youtubeLinkButton.frame.height / 2
-        
-        
+    }
+    
+    @IBAction func barTheaterButtonTapped(_ sender: UIBarButtonItem) {
+        let sb = UIStoryboard(name: "Theater", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "TheaterViewController") as? TheaterViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -97,15 +95,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         vc.castData = castData
         vc.movieData = movieData
         vc.section = indexPath.section
-        
-        self.navigationController?.pushViewController(vc, animated: true)
+       
+        present(vc, animated: true)
+
     }
     
 }
 
 extension ViewController {
     
-    func fillMovieModelData() {
+    private func fillMovieModelData() {
         TMDBAPINetworkManager.shared.fetchMovie { movieData in
             self.movieData = movieData
             
@@ -118,7 +117,7 @@ extension ViewController {
     }
     
     
-    func fetchTrailer(movieID: Int) {
+    private func fetchTrailer(movieID: Int) {
         TMDBAPINetworkManager.shared.fetchTrailer(movieID: movieID) { trailerData in
             self.trailerData = trailerData
             if self.movieData.movieID.count == self.trailerData.count  {
@@ -128,7 +127,7 @@ extension ViewController {
         }
     }
     
-    func fetchCast(movieID: Int) {
+    private func fetchCast(movieID: Int) {
         TMDBAPINetworkManager.shared.fetchCast(movieID: movieID) { castData in
             self.castData = castData
             if self.movieData.movieID.count == self.castData.count  {
