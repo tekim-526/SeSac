@@ -20,10 +20,12 @@
 		9351DBBD28AB1FC8000C7C74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9351DBBB28AB1FC8000C7C74 /* Main.storyboard */; };
 		9351DBBF28AB1FC9000C7C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9351DBBE28AB1FC9000C7C74 /* Assets.xcassets */; };
 		9351DBC228AB1FC9000C7C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9351DBC028AB1FC9000C7C74 /* LaunchScreen.storyboard */; };
+		9359F5E828ADDF23003858BA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359F5E728ADDF23003858BA /* UIViewController+Extension.swift */; };
 		93B5922628AC71AE004F9BD4 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5922528AC71AE004F9BD4 /* CodeViewController.swift */; };
 		93B5922928AC81B3004F9BD4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93B5922828AC81B3004F9BD4 /* SnapKit */; };
 		93B5922B28AC822B004F9BD4 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5922A28AC822A004F9BD4 /* CodeSnapViewController.swift */; };
 		93B5922D28AC8C2B004F9BD4 /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5922C28AC8C2B004F9BD4 /* CodeSnap2ViewController.swift */; };
+		93EB74C628ADE65600CD4DFE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB74C528ADE65600CD4DFE /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +74,11 @@
 		9351DBBE28AB1FC9000C7C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9351DBC128AB1FC9000C7C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9351DBC328AB1FC9000C7C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9359F5E728ADDF23003858BA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		93B5922528AC71AE004F9BD4 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		93B5922A28AC822A004F9BD4 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		93B5922C28AC8C2B004F9BD4 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
+		93EB74C528ADE65600CD4DFE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,14 +137,16 @@
 			isa = PBXGroup;
 			children = (
 				932E1CDE28AB3A84005960DC /* WalkThrough */,
+				93B5922228AC7195004F9BD4 /* CodeBaseUI */,
+				9359F5E428ADDEEF003858BA /* Extensions */,
 				9351DBB528AB1FC8000C7C74 /* AppDelegate.swift */,
 				9351DBB728AB1FC8000C7C74 /* SceneDelegate.swift */,
 				9351DBB928AB1FC8000C7C74 /* ViewController.swift */,
+				93EB74C528ADE65600CD4DFE /* ProfileViewController.swift */,
 				9351DBBB28AB1FC8000C7C74 /* Main.storyboard */,
 				9351DBBE28AB1FC9000C7C74 /* Assets.xcassets */,
 				9351DBC028AB1FC9000C7C74 /* LaunchScreen.storyboard */,
 				9351DBC328AB1FC9000C7C74 /* Info.plist */,
-				93B5922228AC7195004F9BD4 /* CodeBaseUI */,
 			);
 			path = SeSACWeek7Diary;
 			sourceTree = "<group>";
@@ -150,6 +156,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9359F5E428ADDEEF003858BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9359F5E728ADDF23003858BA /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		93B5922228AC7195004F9BD4 /* CodeBaseUI */ = {
@@ -265,10 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9351DBBA28AB1FC8000C7C74 /* ViewController.swift in Sources */,
+				9359F5E828ADDF23003858BA /* UIViewController+Extension.swift in Sources */,
 				932E1CEA28AB410E005960DC /* PageViewController.swift in Sources */,
 				93B5922D28AC8C2B004F9BD4 /* CodeSnap2ViewController.swift in Sources */,
 				9351DBB628AB1FC8000C7C74 /* AppDelegate.swift in Sources */,
 				9351DBB828AB1FC8000C7C74 /* SceneDelegate.swift in Sources */,
+				93EB74C628ADE65600CD4DFE /* ProfileViewController.swift in Sources */,
 				93B5922B28AC822B004F9BD4 /* CodeSnapViewController.swift in Sources */,
 				932E1CE628AB40EB005960DC /* SecondViewController.swift in Sources */,
 				93B5922628AC71AE004F9BD4 /* CodeViewController.swift in Sources */,

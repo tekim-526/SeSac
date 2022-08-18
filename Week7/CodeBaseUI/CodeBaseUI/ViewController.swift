@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         let view = UIButton()
         let image = UIImage(systemName: "xmark")
         view.setImage(image, for: .normal)
-        view.tintColor = .white
+        view.tintColor = .lightGray
         return view
     }()
     
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         let view = UIButton()
         let image = UIImage(systemName: "shippingbox")
         view.setImage(image, for: .normal)
-        view.tintColor = .white
+        view.tintColor = .lightGray
         return view
     }()
     
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         let view = UIButton()
         let image = UIImage(systemName: "gearshape")
         view.setImage(image, for: .normal)
-        view.tintColor = .white
+        view.tintColor = .lightGray
         return view
     }()
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     let nameLabel: UILabel = {
         let view = UILabel()
         view.text = "김태수"
-        view.textColor = .white
+        view.textColor = .black
         view.font = .systemFont(ofSize: 14)
         return view
     }()
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         let view = UIButton()
         let image = UIImage(systemName: "message.fill")
         view.setImage(image, for: .normal)
-        view.tintColor = .white
+        view.tintColor = .lightGray
         return view
     }()
     
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         let view = UIButton()
         let image = UIImage(systemName: "pencil")
         view.setImage(image, for: .normal)
-        view.tintColor = .white
+        view.tintColor = .lightGray
      
         return view
     }()
@@ -72,42 +72,43 @@ class ViewController: UIViewController {
         let image = UIImage(systemName: "magazine.fill")
         view.setImage(image, for: .normal)
 
-        view.tintColor = .white
+        view.tintColor = .lightGray
         return view
     }()
     let chatLabel: UILabel = {
         let view = UILabel()
         view.text = "나와의 채팅"
-        view.textColor = .lightGray
+        view.textColor = .darkGray
         view.font = .systemFont(ofSize: 10)
         return view
     }()
     let editLabel: UILabel = {
         let view = UILabel()
         view.text = "프로필 편집"
-        view.textColor = .lightGray
+        view.textColor = .darkGray
         view.font = .systemFont(ofSize: 10)
         return view
     }()
     let kakaostoryLabel: UILabel = {
         let view = UILabel()
         view.text = "카카오스토리"
-        view.textColor = .lightGray
+        view.textColor = .darkGray
         view.font = .systemFont(ofSize: 10)
         return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         configureLayout()
         
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let vc = BaeminViewController()
-        vc.view.backgroundColor = .white
-        present(vc, animated: true)
+        
+        editProfileButton.addTarget(self, action: #selector(moveToBaeminView), for: .touchUpInside)
+        
+        
     }
     
     func configureLayout() {
@@ -159,6 +160,12 @@ class ViewController: UIViewController {
             make.centerX.equalTo(kakaostoryButton.snp.centerX)
         }
     }
-
+    @objc func moveToBaeminView() {
+        let vc = BaeminViewController()
+        vc.getProfileName = {
+            self.nameLabel.text = vc.searchTextField.text
+        }
+        present(vc, animated: true)
+    }
 }
 

@@ -41,15 +41,23 @@ class BaeminViewController: UIViewController {
         view.tintColor = .white
         return view
     }()
-    let searchButton: UIButton = {
+    let textFieldView: UIView = {
+        let view = UIView()
+
+        return view
+    }()
+    let magnifyingglassButton: UIButton = {
         let view = UIButton()
-        let image = UIImage(systemName: "magnifyingglass")
-        
-        view.layer.cornerRadius = 3
+        view.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        view.tintColor = .white
+        view.backgroundColor = .clear
+        return view
+    }()
+    let searchTextField: UITextField = {
+        let view = UITextField()
         view.backgroundColor = .white
-        view.setImage(image, for: .normal)
-        view.tintColor = .systemMint
         view.contentHorizontalAlignment = .left
+        view.layer.cornerRadius = 3
         return view
     }()
     let baedalImageView: UIImageView = {
@@ -100,14 +108,20 @@ class BaeminViewController: UIViewController {
         view.contentMode = .scaleToFill
         return view
     }()
+    
+    var getProfileName: (() ->())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI(spacing: 12)
         configuretopViewUI()
+        magnifyingglassButton.addTarget(self, action: #selector(magnifyingglassButtonTapped), for: .touchUpInside)
+        view.backgroundColor = .white
     }
+   
     
     func configureUI(spacing: Double) {
-        [topView, baedalImageView,baeminOneImageView,togoImageView,bmartImageView,shoppingLiveImageView,presentImageView,specialImageView,bannerImageView].forEach { view.addSubview($0) }
+        [topView, baedalImageView, baeminOneImageView, togoImageView, bmartImageView, shoppingLiveImageView, presentImageView, specialImageView, bannerImageView].forEach { view.addSubview($0) }
         topView.snp.makeConstraints { make in
             make.leading.top.trailing.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(view.snp.height).multipliedBy(0.15)
@@ -157,7 +171,10 @@ class BaeminViewController: UIViewController {
     }
     
     func configuretopViewUI() {
-        [locationLabel, fourSquareButton, alertButton, myPageButton, searchButton].forEach { topView.addSubview($0) }
+        configureTextFieldView()
+        
+        [locationLabel, fourSquareButton, alertButton, myPageButton, textFieldView].forEach { topView.addSubview($0) }
+        
         locationLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.leading.equalTo(20)
@@ -174,11 +191,31 @@ class BaeminViewController: UIViewController {
             make.top.equalTo(locationLabel.snp.top)
             make.trailing.equalTo(myPageButton.snp.leading).offset(-12)
         }
-        searchButton.snp.makeConstraints { make in
+        
+        textFieldView.snp.makeConstraints { make in
             make.top.equalTo(locationLabel.snp.bottom).offset(12)
             make.leading.equalTo(20)
             make.trailing.equalTo(-20)
             make.height.equalTo(topView.snp.height).multipliedBy(0.3)
         }
     }
+    func configureTextFieldView() {
+        [magnifyingglassButton, searchTextField].forEach { someView in
+            textFieldView.addSubview(someView)
+        }
+        magnifyingglassButton.snp.makeConstraints { make in
+            make.top.leading.bottom.equalTo(0)
+            make.height.width.equalTo(textFieldView.snp.height)
+        }
+        searchTextField.snp.makeConstraints { make in
+            make.leading.equalTo(magnifyingglassButton.snp.trailing).offset(4)
+            make.top.bottom.trailing.equalTo(0)
+        }
+        
+    }
+    @objc func magnifyingglassButtonTapped() {
+        getProfileName?()
+        dismiss(animated: true)
+    }
+    
 }
