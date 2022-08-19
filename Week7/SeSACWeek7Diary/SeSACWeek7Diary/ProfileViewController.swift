@@ -7,6 +7,12 @@
 
 import UIKit
 import SnapKit
+
+extension NSNotification.Name {
+    static let saveButton = NSNotification.Name("saveButtonNotification")
+}
+
+
 class ProfileViewController: UIViewController {
     
     let saveButton: UIButton = {
@@ -24,14 +30,23 @@ class ProfileViewController: UIViewController {
         return view
     }()
     
-    var saveButtonActionHandler: (() -> ())?
+    var saveButtonActionHandler: ((String?) -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         configure()
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name: NSNotification.Name("test"), object: nil)
     }
+    
+    @objc func saveButtonNotificationObserver(notification: NSNotification) {
+        if let name = notification.userInfo?["name"] as? String {
+            print(nameTextField)
+            self.nameTextField.text = name
+        }
+    }
+    
     func configure() {
         [saveButton, nameTextField].forEach { someView in
             view.addSubview(someView)
@@ -47,11 +62,18 @@ class ProfileViewController: UIViewController {
         }
     }
     @objc func saveButtonTapped() {
+        // 1. 클로저를 통한 값 전달
+        //saveButtonActionHandler?(nameTextField.text)
         
-        saveButtonActionHandler?()
+        // 2. 노티피케이션을 통한 값 전달
+        NotificationCenter.default.post(name: Notification.Name.saveButton, object: nil, userInfo: ["name" : nameTextField.text, "value" : 123456])
+        
+        
         //화면 dismiss
         dismiss(animated: true)
     }
    
-
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("test"), object: nil)
+    }
 }

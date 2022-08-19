@@ -26,6 +26,11 @@
 		93B5922B28AC822B004F9BD4 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5922A28AC822A004F9BD4 /* CodeSnapViewController.swift */; };
 		93B5922D28AC8C2B004F9BD4 /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5922C28AC8C2B004F9BD4 /* CodeSnap2ViewController.swift */; };
 		93EB74C628ADE65600CD4DFE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB74C528ADE65600CD4DFE /* ProfileViewController.swift */; };
+		93EB74CF28AF127700CD4DFE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB74CE28AF127700CD4DFE /* BaseViewController.swift */; };
+		93EB74D228AF144300CD4DFE /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB74D128AF144300CD4DFE /* WriteViewController.swift */; };
+		93EB74D428AF169D00CD4DFE /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB74D328AF169D00CD4DFE /* BaseView.swift */; };
+		93EB74D628AF179B00CD4DFE /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB74D528AF179B00CD4DFE /* WriteView.swift */; };
+		93EB74D928AF2D0300CD4DFE /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB74D828AF2D0300CD4DFE /* BlackRadiusTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		93B5922A28AC822A004F9BD4 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		93B5922C28AC8C2B004F9BD4 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
 		93EB74C528ADE65600CD4DFE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		93EB74CE28AF127700CD4DFE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		93EB74D128AF144300CD4DFE /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		93EB74D328AF169D00CD4DFE /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		93EB74D528AF179B00CD4DFE /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		93EB74D828AF2D0300CD4DFE /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +146,8 @@
 		9351DBB428AB1FC8000C7C74 /* SeSACWeek7Diary */ = {
 			isa = PBXGroup;
 			children = (
+				93EB74D028AF141A00CD4DFE /* Diary */,
+				93EB74CB28AF125B00CD4DFE /* Utility */,
 				932E1CDE28AB3A84005960DC /* WalkThrough */,
 				93B5922228AC7195004F9BD4 /* CodeBaseUI */,
 				9359F5E428ADDEEF003858BA /* Extensions */,
@@ -174,6 +186,33 @@
 				93B5922C28AC8C2B004F9BD4 /* CodeSnap2ViewController.swift */,
 			);
 			path = CodeBaseUI;
+			sourceTree = "<group>";
+		};
+		93EB74CB28AF125B00CD4DFE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				93EB74D728AF2CEB00CD4DFE /* CustomView */,
+				93EB74CE28AF127700CD4DFE /* BaseViewController.swift */,
+				93EB74D328AF169D00CD4DFE /* BaseView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		93EB74D028AF141A00CD4DFE /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				93EB74D128AF144300CD4DFE /* WriteViewController.swift */,
+				93EB74D528AF179B00CD4DFE /* WriteView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		93EB74D728AF2CEB00CD4DFE /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				93EB74D828AF2D0300CD4DFE /* BlackRadiusTextField.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,16 +317,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EB74D628AF179B00CD4DFE /* WriteView.swift in Sources */,
+				93EB74CF28AF127700CD4DFE /* BaseViewController.swift in Sources */,
+				93EB74D928AF2D0300CD4DFE /* BlackRadiusTextField.swift in Sources */,
 				9351DBBA28AB1FC8000C7C74 /* ViewController.swift in Sources */,
 				9359F5E828ADDF23003858BA /* UIViewController+Extension.swift in Sources */,
 				932E1CEA28AB410E005960DC /* PageViewController.swift in Sources */,
 				93B5922D28AC8C2B004F9BD4 /* CodeSnap2ViewController.swift in Sources */,
 				9351DBB628AB1FC8000C7C74 /* AppDelegate.swift in Sources */,
+				93EB74D228AF144300CD4DFE /* WriteViewController.swift in Sources */,
 				9351DBB828AB1FC8000C7C74 /* SceneDelegate.swift in Sources */,
 				93EB74C628ADE65600CD4DFE /* ProfileViewController.swift in Sources */,
 				93B5922B28AC822B004F9BD4 /* CodeSnapViewController.swift in Sources */,
 				932E1CE628AB40EB005960DC /* SecondViewController.swift in Sources */,
 				93B5922628AC71AE004F9BD4 /* CodeViewController.swift in Sources */,
+				93EB74D428AF169D00CD4DFE /* BaseView.swift in Sources */,
 				932E1CE828AB40F5005960DC /* ThirdViewController.swift in Sources */,
 				932E1CE428AB3AB1005960DC /* FirstViewController.swift in Sources */,
 			);
