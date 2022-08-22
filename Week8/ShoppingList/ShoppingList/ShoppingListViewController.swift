@@ -25,6 +25,7 @@ class ShoppingListViewController: BaseViewController {
         
         shoppingListView.tableView.delegate = self
         shoppingListView.tableView.dataSource = self
+        shoppingListView.tableView.allowsSelection = false
         shoppingListView.tableView.register(ShoppinListTableViewCell.self, forCellReuseIdentifier: "ShoppinListTableViewCell")
     }
     override func configureUI() {
@@ -54,8 +55,11 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppinListTableViewCell") as? ShoppinListTableViewCell else { return UITableViewCell() }
         cell.label.text = tasks[indexPath.row].tableString
+        cell.isFinishedButton.addTarget(self, action: #selector(isFinishedButtonTapped), for: .touchUpInside)
         return cell
     }
-    
+    @objc func isFinishedButtonTapped() {
+        print(1)
+    }
     
 }
