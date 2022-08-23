@@ -7,12 +7,14 @@
 
 import UIKit
 import SnapKit
-
+import RealmSwift
 class ShoppinListTableViewCell: UITableViewCell {
     let isFinishedButton: UIButton = {
         let view = UIButton()
-        let image = UIImage(systemName: "checkmark.square")
-        view.setImage(image, for: .normal)
+//        let image = UIImage(systemName: "checkmark.square")
+//        view.setImage(image, for: .normal)
+       
+        
         return view
     }()
     
@@ -30,9 +32,10 @@ class ShoppinListTableViewCell: UITableViewCell {
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: "ShoppinListTableViewCell")
+        super.init(style: style, reuseIdentifier: "ShoppinListTableViewCell")
         configureUI()
         makeConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -42,13 +45,14 @@ class ShoppinListTableViewCell: UITableViewCell {
     
     func configureUI() {
         
-        [isFinishedButton, label, isFavoriteButton].forEach { self.addSubview($0) }
+        [isFinishedButton, label, isFavoriteButton].forEach { self.contentView.addSubview($0) }
     }
     
     func makeConstraints() {
         isFinishedButton.snp.makeConstraints { make in
             make.leading.equalTo(12)
             make.centerY.equalTo(self.snp.centerY)
+            make.width.height.equalTo(24)
         }
         label.snp.makeConstraints { make in
             make.leading.equalTo(isFinishedButton.snp.trailing).offset(12)

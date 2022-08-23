@@ -60,7 +60,7 @@ class BucketListTableViewController: UITableViewController {
     @objc func checkBoxButtonClicked(sender: UIButton) {
         
         list[sender.tag].done.toggle()
-        
+        print(1)
         
         tableView.reloadRows(at: [[0, sender.tag]], with: .fade)
         

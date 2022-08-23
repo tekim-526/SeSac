@@ -18,5 +18,7 @@ class ShoppingListTable: Object {
     convenience init(tableString: String?) {
         self.init()
         self.tableString = tableString
+        self.isFavorite = false
+        self.isFinished = false
     }
 }

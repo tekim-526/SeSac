@@ -13,7 +13,12 @@ class ShoppingListViewController: BaseViewController {
     let shoppingListView = ShoppingListView()
 
     let localRealm = try! Realm()
-    var tasks: Results<ShoppingListTable>!
+    var tasks: Results<ShoppingListTable>! {
+        didSet {
+            shoppingListView.tableView.reloadData()
+            
+        }
+    }
     
     override func loadView() {
         view = shoppingListView
@@ -25,7 +30,7 @@ class ShoppingListViewController: BaseViewController {
         
         shoppingListView.tableView.delegate = self
         shoppingListView.tableView.dataSource = self
-        shoppingListView.tableView.allowsSelection = false
+
         shoppingListView.tableView.register(ShoppinListTableViewCell.self, forCellReuseIdentifier: "ShoppinListTableViewCell")
     }
     override func configureUI() {
@@ -54,12 +59,43 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppinListTableViewCell") as? ShoppinListTableViewCell else { return UITableViewCell() }
+        let finishedImage = localRealm.objects(ShoppingListTable.self)[indexPath.row].isFinished ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "checkmark.square")
+        let favoriteImage = tasks[indexPath.row].isFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+       
         cell.label.text = tasks[indexPath.row].tableString
+        
+        cell.isFinishedButton.tag = indexPath.row
+        cell.isFinishedButton.setImage(finishedImage, for: .normal)
         cell.isFinishedButton.addTarget(self, action: #selector(isFinishedButtonTapped), for: .touchUpInside)
+
+        cell.isFavoriteButton.tag = indexPath.row
+        cell.isFavoriteButton.setImage(favoriteImage, for: .normal)
+        cell.isFavoriteButton.addTarget(self, action: #selector(isFavoriteButtonTapped), for: .touchUpInside)
+
+    
         return cell
     }
-    @objc func isFinishedButtonTapped() {
-        print(1)
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "제거") { action, view, handler in
+            try! self.localRealm.write {
+                self.localRealm.delete(self.tasks[indexPath.row])
+            }
+            self.shoppingListView.tableView.reloadData()
+        }
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    @objc func isFinishedButtonTapped(_ sender: UIButton) {
+        try! localRealm.write {
+            self.tasks[sender.tag].isFinished.toggle()
+        }
+        
+        shoppingListView.tableView.reloadRows(at: [[0, sender.tag]], with: .none)
+    }
+    @objc func isFavoriteButtonTapped(_ sender: UIButton) {
+        try! localRealm.write {
+            self.tasks[sender.tag].isFavorite.toggle()
+        }
+        shoppingListView.tableView.reloadRows(at:[[0, sender.tag]], with: .none)
     }
     
 }
