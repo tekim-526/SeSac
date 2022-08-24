@@ -12,7 +12,6 @@ class ShoppingListTable: Object {
     @Persisted var tableString: String?
     @Persisted var isFavorite: Bool
     @Persisted var isFinished: Bool
-    
     @Persisted(primaryKey: true) var objectId: ObjectId
     
     convenience init(tableString: String?) {

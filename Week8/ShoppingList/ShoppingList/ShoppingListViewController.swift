@@ -16,7 +16,6 @@ class ShoppingListViewController: BaseViewController {
     var tasks: Results<ShoppingListTable>! {
         didSet {
             shoppingListView.tableView.reloadData()
-            
         }
     }
     
@@ -25,13 +24,18 @@ class ShoppingListViewController: BaseViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         
         tasks = localRealm.objects(ShoppingListTable.self)
-        
+
         shoppingListView.tableView.delegate = self
         shoppingListView.tableView.dataSource = self
-
+        
         shoppingListView.tableView.register(ShoppinListTableViewCell.self, forCellReuseIdentifier: "ShoppinListTableViewCell")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        shoppingListView.tableView.reloadData()
     }
     override func configureUI() {
         shoppingListView.searchBar.searchTextField.addTarget(self, action: #selector(searchbarAction), for: .editingDidEndOnExit)
@@ -71,18 +75,32 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
         cell.isFavoriteButton.tag = indexPath.row
         cell.isFavoriteButton.setImage(favoriteImage, for: .normal)
         cell.isFavoriteButton.addTarget(self, action: #selector(isFavoriteButtonTapped), for: .touchUpInside)
-
-    
+        cell.searchImage.image = loadImageFromDocument(fileName: "\(tasks[indexPath.row].objectId).jpg")
+        
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 116
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "제거") { action, view, handler in
             try! self.localRealm.write {
                 self.localRealm.delete(self.tasks[indexPath.row])
             }
+            self.removeImageFromDocument(fileName: "\(self.tasks[indexPath.row].objectId).jpg")
             self.shoppingListView.tableView.reloadData()
+            
         }
         return UISwipeActionsConfiguration(actions: [action])
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = WriteViewController()
+        vc.modalPresentationStyle = .fullScreen
+        vc.indexPath = indexPath
+        UnsplashAPIManager.getSearchData(query: tasks[indexPath.row].tableString!, page: 1) { urls in
+            vc.urls = urls
+        }
+        present(vc, animated: true)
     }
     @objc func isFinishedButtonTapped(_ sender: UIButton) {
         try! localRealm.write {

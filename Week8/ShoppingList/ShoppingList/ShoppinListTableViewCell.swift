@@ -9,12 +9,10 @@ import UIKit
 import SnapKit
 import RealmSwift
 class ShoppinListTableViewCell: UITableViewCell {
+    
     let isFinishedButton: UIButton = {
         let view = UIButton()
-//        let image = UIImage(systemName: "checkmark.square")
-//        view.setImage(image, for: .normal)
-       
-        
+
         return view
     }()
     
@@ -30,7 +28,12 @@ class ShoppinListTableViewCell: UITableViewCell {
         view.tintColor = .systemPink
         return view
     }()
-    
+    let searchImage: UIImageView = {
+        let view = UIImageView()
+        view.layer.borderWidth = view.image == nil ? 0 : 1
+        view.layer.cornerRadius = 3
+        return view
+    }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "ShoppinListTableViewCell")
         configureUI()
@@ -44,8 +47,7 @@ class ShoppinListTableViewCell: UITableViewCell {
     
     
     func configureUI() {
-        
-        [isFinishedButton, label, isFavoriteButton].forEach { self.contentView.addSubview($0) }
+        [isFinishedButton, label, isFavoriteButton, searchImage].forEach { self.contentView.addSubview($0) }
     }
     
     func makeConstraints() {
@@ -61,6 +63,12 @@ class ShoppinListTableViewCell: UITableViewCell {
         isFavoriteButton.snp.makeConstraints { make in
             make.trailing.equalTo(-12)
             make.centerY.equalTo(self.snp.centerY)
+        }
+        searchImage.snp.makeConstraints { make in
+            make.trailing.equalTo(isFavoriteButton.snp.leading).offset(-12)
+            make.width.equalTo(75)
+            make.height.equalTo(100)
+            make.centerY.equalTo(self.contentView.snp.centerY)
         }
     }
     

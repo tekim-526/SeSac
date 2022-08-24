@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		936C6D9D28B623ED000DA087 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 936C6D9C28B623ED000DA087 /* Alamofire */; };
+		936C6DA028B623FE000DA087 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 936C6D9F28B623FE000DA087 /* SwiftyJSON */; };
+		936C6DA228B6240D000DA087 /* UnsplashAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C6DA128B6240D000DA087 /* UnsplashAPIManager.swift */; };
+		936C6DA428B625F3000DA087 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C6DA328B625F3000DA087 /* WriteViewController.swift */; };
+		936C6DA628B6262C000DA087 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C6DA528B6262C000DA087 /* WriteView.swift */; };
+		936C6DA828B62982000DA087 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C6DA728B62982000DA087 /* ImageCollectionViewCell.swift */; };
+		936C6DAB28B6356E000DA087 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 936C6DAA28B6356E000DA087 /* Kingfisher */; };
+		936C6DAD28B63E3B000DA087 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936C6DAC28B63E3B000DA087 /* FileManager+Extension.swift */; };
 		93BBDBC228B34E7A000BC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBDBC128B34E7A000BC06F /* AppDelegate.swift */; };
 		93BBDBC428B34E7A000BC06F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBDBC328B34E7A000BC06F /* SceneDelegate.swift */; };
 		93BBDBC628B34E7A000BC06F /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBDBC528B34E7A000BC06F /* ShoppingListViewController.swift */; };
@@ -24,6 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		936C6DA128B6240D000DA087 /* UnsplashAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManager.swift; sourceTree = "<group>"; };
+		936C6DA328B625F3000DA087 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		936C6DA528B6262C000DA087 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		936C6DA728B62982000DA087 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		936C6DAC28B63E3B000DA087 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		93BBDBBE28B34E7A000BC06F /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BBDBC128B34E7A000BC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93BBDBC328B34E7A000BC06F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +57,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936C6DAB28B6356E000DA087 /* Kingfisher in Frameworks */,
 				93BBDBE228B35094000BC06F /* SnapKit in Frameworks */,
+				936C6D9D28B623ED000DA087 /* Alamofire in Frameworks */,
 				93BBDBDF28B35083000BC06F /* RealmSwift in Frameworks */,
+				936C6DA028B623FE000DA087 /* SwiftyJSON in Frameworks */,
 				93BBDBDD28B35083000BC06F /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,12 +90,17 @@
 			children = (
 				93BBDBC128B34E7A000BC06F /* AppDelegate.swift */,
 				93BBDBC328B34E7A000BC06F /* SceneDelegate.swift */,
-				93BBDBC528B34E7A000BC06F /* ShoppingListViewController.swift */,
+				936C6DAC28B63E3B000DA087 /* FileManager+Extension.swift */,
 				93BBDBE528B35989000BC06F /* ShoppingListTable.swift */,
+				93BBDBC528B34E7A000BC06F /* ShoppingListViewController.swift */,
 				93BBDBE328B353CF000BC06F /* ShoppinListTableViewCell.swift */,
 				93BBDBD928B34F88000BC06F /* ShoppingListView.swift */,
 				93BBDBD728B34EF4000BC06F /* BaseView.swift */,
 				93BBDBD528B34EAC000BC06F /* BaseViewController.swift */,
+				936C6DA328B625F3000DA087 /* WriteViewController.swift */,
+				936C6DA528B6262C000DA087 /* WriteView.swift */,
+				936C6DA728B62982000DA087 /* ImageCollectionViewCell.swift */,
+				936C6DA128B6240D000DA087 /* UnsplashAPIManager.swift */,
 				93BBDBC728B34E7A000BC06F /* Main.storyboard */,
 				93BBDBCA28B34E7C000BC06F /* Assets.xcassets */,
 				93BBDBCC28B34E7C000BC06F /* LaunchScreen.storyboard */,
@@ -108,6 +129,9 @@
 				93BBDBDC28B35083000BC06F /* Realm */,
 				93BBDBDE28B35083000BC06F /* RealmSwift */,
 				93BBDBE128B35094000BC06F /* SnapKit */,
+				936C6D9C28B623ED000DA087 /* Alamofire */,
+				936C6D9F28B623FE000DA087 /* SwiftyJSON */,
+				936C6DAA28B6356E000DA087 /* Kingfisher */,
 			);
 			productName = ShoppingList;
 			productReference = 93BBDBBE28B34E7A000BC06F /* ShoppingList.app */;
@@ -140,6 +164,9 @@
 			packageReferences = (
 				93BBDBDB28B35083000BC06F /* XCRemoteSwiftPackageReference "realm-swift" */,
 				93BBDBE028B35094000BC06F /* XCRemoteSwiftPackageReference "SnapKit" */,
+				936C6D9B28B623ED000DA087 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				936C6D9E28B623FD000DA087 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				936C6DA928B6356D000DA087 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 93BBDBBF28B34E7A000BC06F /* Products */;
 			projectDirPath = "";
@@ -173,9 +200,14 @@
 				93BBDBD628B34EAC000BC06F /* BaseViewController.swift in Sources */,
 				93BBDBD828B34EF4000BC06F /* BaseView.swift in Sources */,
 				93BBDBC228B34E7A000BC06F /* AppDelegate.swift in Sources */,
+				936C6DA628B6262C000DA087 /* WriteView.swift in Sources */,
+				936C6DA828B62982000DA087 /* ImageCollectionViewCell.swift in Sources */,
 				93BBDBC428B34E7A000BC06F /* SceneDelegate.swift in Sources */,
 				93BBDBE628B35989000BC06F /* ShoppingListTable.swift in Sources */,
 				93BBDBE428B353CF000BC06F /* ShoppinListTableViewCell.swift in Sources */,
+				936C6DAD28B63E3B000DA087 /* FileManager+Extension.swift in Sources */,
+				936C6DA428B625F3000DA087 /* WriteViewController.swift in Sources */,
+				936C6DA228B6240D000DA087 /* UnsplashAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +427,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		936C6D9B28B623ED000DA087 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		936C6D9E28B623FD000DA087 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		936C6DA928B6356D000DA087 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		93BBDBDB28B35083000BC06F /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -414,6 +470,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		936C6D9C28B623ED000DA087 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 936C6D9B28B623ED000DA087 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		936C6D9F28B623FE000DA087 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 936C6D9E28B623FD000DA087 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		936C6DAA28B6356E000DA087 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 936C6DA928B6356D000DA087 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		93BBDBDC28B35083000BC06F /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 93BBDBDB28B35083000BC06F /* XCRemoteSwiftPackageReference "realm-swift" */;
