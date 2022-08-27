@@ -11,8 +11,8 @@ import RealmSwift
 
 class ShoppingListViewController: BaseViewController {
     let shoppingListView = ShoppingListView()
-
-    let localRealm = try! Realm()
+    let userDirectory = UserDirectory()
+    
     var tasks: Results<ShoppingListTable>! {
         didSet {
             shoppingListView.tableView.reloadData()
@@ -26,13 +26,15 @@ class ShoppingListViewController: BaseViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        tasks = localRealm.objects(ShoppingListTable.self)
-
+        tasks = userDirectory.fetch()
+        
         shoppingListView.tableView.delegate = self
         shoppingListView.tableView.dataSource = self
         
         shoppingListView.tableView.register(ShoppinListTableViewCell.self, forCellReuseIdentifier: "ShoppinListTableViewCell")
+        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         shoppingListView.tableView.reloadData()
@@ -44,28 +46,25 @@ class ShoppingListViewController: BaseViewController {
     
     
     @objc func searchbarAction() {
-        var task: ShoppingListTable
         if let text = shoppingListView.searchBar.text {
-            task = ShoppingListTable(tableString: text)
-            try! localRealm.write{
-                localRealm.add(task)
-            }
+            let task = ShoppingListTable(tableString: text)
+            userDirectory.addTask(task: task)
             shoppingListView.tableView.reloadData()
         }
     }
     
 }
 
-extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource, FileManagerProtocol {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tasks.count
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppinListTableViewCell") as? ShoppinListTableViewCell else { return UITableViewCell() }
-        let finishedImage = localRealm.objects(ShoppingListTable.self)[indexPath.row].isFinished ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "checkmark.square")
+        let finishedImage = tasks[indexPath.row].isFinished ? UIImage(systemName: "checkmark.square.fill") : UIImage(systemName: "checkmark.square")
         let favoriteImage = tasks[indexPath.row].isFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
-       
+        
         cell.label.text = tasks[indexPath.row].tableString
         
         cell.isFinishedButton.tag = indexPath.row
@@ -82,12 +81,13 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 116
     }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "제거") { action, view, handler in
-            try! self.localRealm.write {
-                self.localRealm.delete(self.tasks[indexPath.row])
-            }
             self.removeImageFromDocument(fileName: "\(self.tasks[indexPath.row].objectId).jpg")
+            
+            self.userDirectory.deleteTask(task: self.tasks[indexPath.row])
+
             self.shoppingListView.tableView.reloadData()
             
         }
@@ -103,17 +103,18 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
         present(vc, animated: true)
     }
     @objc func isFinishedButtonTapped(_ sender: UIButton) {
-        try! localRealm.write {
-            self.tasks[sender.tag].isFinished.toggle()
-        }
-        
+        userDirectory.updateFinished(item: self.tasks[sender.tag])
         shoppingListView.tableView.reloadRows(at: [[0, sender.tag]], with: .none)
+        
     }
     @objc func isFavoriteButtonTapped(_ sender: UIButton) {
-        try! localRealm.write {
-            self.tasks[sender.tag].isFavorite.toggle()
-        }
+        userDirectory.updateFavorite(item: self.tasks[sender.tag])
         shoppingListView.tableView.reloadRows(at:[[0, sender.tag]], with: .none)
+    }
+    @objc func backupBarButtonTapped() {
+        let vc = BackupViewController()
+
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

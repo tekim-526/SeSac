@@ -19,6 +19,8 @@
 		93CAAB0528B65133000927FB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93CAAB0428B65133000927FB /* SnapKit */; };
 		93CAAB0828B65152000927FB /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 93CAAB0728B65152000927FB /* Realm */; };
 		93CAAB0A28B65152000927FB /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 93CAAB0928B65152000927FB /* RealmSwift */; };
+		93CAAB0C28B6FD8A000927FB /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAAB0B28B6FD8A000927FB /* FileManager+Extension.swift */; };
+		93CAAB0F28B70167000927FB /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 93CAAB0E28B70167000927FB /* Zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,7 @@
 		93CAAAFD28B6500C000927FB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		93CAAAFF28B6504A000927FB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		93CAAB0128B6509A000927FB /* BackupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
+		93CAAB0B28B6FD8A000927FB /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			files = (
 				93CAAB0A28B65152000927FB /* RealmSwift in Frameworks */,
 				93CAAB0828B65152000927FB /* Realm in Frameworks */,
+				93CAAB0F28B70167000927FB /* Zip in Frameworks */,
 				93CAAB0528B65133000927FB /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +75,7 @@
 				93CAAAE928B64FFB000927FB /* AppDelegate.swift */,
 				93CAAAEB28B64FFB000927FB /* SceneDelegate.swift */,
 				93CAAAED28B64FFB000927FB /* BackupViewController.swift */,
+				93CAAB0B28B6FD8A000927FB /* FileManager+Extension.swift */,
 				93CAAB0128B6509A000927FB /* BackupView.swift */,
 				93CAAAFD28B6500C000927FB /* BaseViewController.swift */,
 				93CAAAFF28B6504A000927FB /* BaseView.swift */,
@@ -102,6 +107,7 @@
 				93CAAB0428B65133000927FB /* SnapKit */,
 				93CAAB0728B65152000927FB /* Realm */,
 				93CAAB0928B65152000927FB /* RealmSwift */,
+				93CAAB0E28B70167000927FB /* Zip */,
 			);
 			productName = Backup;
 			productReference = 93CAAAE628B64FFB000927FB /* Backup.app */;
@@ -134,6 +140,7 @@
 			packageReferences = (
 				93CAAB0328B65133000927FB /* XCRemoteSwiftPackageReference "SnapKit" */,
 				93CAAB0628B65152000927FB /* XCRemoteSwiftPackageReference "realm-swift" */,
+				93CAAB0D28B70167000927FB /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = 93CAAAE728B64FFB000927FB /* Products */;
 			projectDirPath = "";
@@ -167,6 +174,7 @@
 				93CAAB0028B6504A000927FB /* BaseView.swift in Sources */,
 				93CAAAEA28B64FFB000927FB /* AppDelegate.swift in Sources */,
 				93CAAB0228B6509A000927FB /* BackupView.swift in Sources */,
+				93CAAB0C28B6FD8A000927FB /* FileManager+Extension.swift in Sources */,
 				93CAAAEC28B64FFB000927FB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +411,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		93CAAB0D28B70167000927FB /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -420,6 +436,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 93CAAB0628B65152000927FB /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		93CAAB0E28B70167000927FB /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93CAAB0D28B70167000927FB /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

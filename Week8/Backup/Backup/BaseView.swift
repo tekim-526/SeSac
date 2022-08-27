@@ -20,4 +20,5 @@ class BaseView: UIView {
     
     func configureUI() {}
     func makeConstraints() {}
+    
 }

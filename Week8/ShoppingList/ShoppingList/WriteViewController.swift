@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 import Kingfisher
 
-class WriteViewController: BaseViewController {
+class WriteViewController: BaseViewController, FileManagerProtocol {
     let localRealm = try! Realm()
     var tasks: Results<ShoppingListTable>!
     
@@ -31,6 +31,7 @@ class WriteViewController: BaseViewController {
         writeView.collectionView.delegate = self
         writeView.collectionView.dataSource = self
         writeView.collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "ImageCollectionViewCell")
+        createDirectory(dirName: "image")
         configureUI()
     }
     override func configureUI() {

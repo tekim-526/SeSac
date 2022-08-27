@@ -18,6 +18,7 @@ class ShoppinListTableViewCell: UITableViewCell {
     
     let label: UILabel = {
         let view = UILabel()
+        
         return view
     }()
     
@@ -28,14 +29,16 @@ class ShoppinListTableViewCell: UITableViewCell {
         view.tintColor = .systemPink
         return view
     }()
-    let searchImage: UIImageView = {
+    lazy var searchImage: UIImageView = {
         let view = UIImageView()
+
         view.layer.borderWidth = view.image == nil ? 0 : 1
         view.layer.cornerRadius = 3
         return view
     }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "ShoppinListTableViewCell")
+
         configureUI()
         makeConstraints()
         
