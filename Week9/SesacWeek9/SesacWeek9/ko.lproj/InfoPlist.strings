@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  SesacWeek9
+
+  Created by Kim TaeSoo on 2022/09/06.
+  
+*/
+
+"CFBundleDisplayName" = "새싹 9주차";
+
+"NSLocationWhenInUseUsageDescription" = "권한에 대한 설명";

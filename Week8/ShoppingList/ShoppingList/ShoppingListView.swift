@@ -31,6 +31,7 @@ class ShoppingListView: BaseView {
     }
     
     override func configureUI() {
+        print(#function)
         [searchBar, tableView].forEach {
             self.addSubview($0)
         }

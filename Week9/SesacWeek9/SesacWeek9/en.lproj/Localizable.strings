@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  SesacWeek9
+
+  Created by Kim TaeSoo on 2022/09/06.
+  
+*/
+
+"navigation_title" = "My Diary";
+
+"search_placeholder" = "Search Movie";
+
+"textField_placeholder" = "How old are you?";
+
+"common_cancel" = "Cancel";
+
+"introduce" = "my name is %@.";
+"number_text" = "i'm %lld years old.";

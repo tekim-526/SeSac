@@ -9,7 +9,6 @@ import UIKit
 import SnapKit
 import RealmSwift
 class ShoppinListTableViewCell: UITableViewCell {
-    
     let isFinishedButton: UIButton = {
         let view = UIButton()
 
@@ -38,7 +37,6 @@ class ShoppinListTableViewCell: UITableViewCell {
     }()
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "ShoppinListTableViewCell")
-
         configureUI()
         makeConstraints()
         

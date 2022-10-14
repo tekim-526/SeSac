@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  SesacWeek9
+
+  Created by Kim TaeSoo on 2022/09/06.
+  
+*/
+
+"navigation_title" = "나의 다이어리";
+
+"search_placeholder" = "영화를 검색해보세요";
+
+"textField_placeholder" = "나이를 입력해보세요";
+
+"common_cancel" = "취소";
+
+"introduce" = "저는 %@입니다.";
+"number_text" = "저는 %lld살입니다.";
+
+/*
+ 리뷰 남기기 정책 -> 리뷰 얼럿: 1년에 한 디바이스 당 3회
+ 문의 정책
+ */

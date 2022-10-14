@@ -33,7 +33,7 @@ class CalendarViewController: BaseViewController, FileManagerProtocol {
         
         
         tasks = userDirectory.fetchDate(date: Date())
-        
+        print(#function)
         calendarView.calendar.delegate = self
         calendarView.calendar.dataSource = self
         calendarView.tableView.delegate = self
