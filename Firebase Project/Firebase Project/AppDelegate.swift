@@ -18,7 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        aboutRealmMigration()
+        let config = Realm.Configuration(schemaVersion: 3) { migration, oldSchemaVersion in
+            if oldSchemaVersion < 1 { // List<DetailTodo> 추가
+                
+            }
+            if oldSchemaVersion < 2 { // EmbededObject 추가
+                
+            }
+            if oldSchemaVersion < 3 { // DetailTodo deadline Column 추가
+                
+            }
+        }
+        Realm.Configuration.defaultConfiguration = config
+        
+        //aboutRealmMigration()
         
         UIViewController.swizzleMethod()
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		934004E928FE4DB1004855A9 /* SimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934004E828FE4DB1004855A9 /* SimpleCollectionViewController.swift */; };
 		93CAC61C28ED159000DC85D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAC61B28ED159000DC85D0 /* AppDelegate.swift */; };
 		93CAC61E28ED159000DC85D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAC61D28ED159000DC85D0 /* SceneDelegate.swift */; };
 		93CAC62028ED159000DC85D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CAC61F28ED159000DC85D0 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		934004E828FE4DB1004855A9 /* SimpleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewController.swift; sourceTree = "<group>"; };
 		93CAC61828ED159000DC85D0 /* Firebase Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CAC61B28ED159000DC85D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93CAC61D28ED159000DC85D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				93CAC61F28ED159000DC85D0 /* ViewController.swift */,
 				93DB552628F79B1F00740087 /* Todo.swift */,
 				93CAC62128ED159000DC85D0 /* Main.storyboard */,
+				934004E828FE4DB1004855A9 /* SimpleCollectionViewController.swift */,
 				93DB552828F79BB800740087 /* MigrationViewController.swift */,
 				93CAC62428ED159200DC85D0 /* Assets.xcassets */,
 				93CAC62628ED159200DC85D0 /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 				93CAC61C28ED159000DC85D0 /* AppDelegate.swift in Sources */,
 				93DB552928F79BB800740087 /* MigrationViewController.swift in Sources */,
 				93CAC61E28ED159000DC85D0 /* SceneDelegate.swift in Sources */,
+				934004E928FE4DB1004855A9 /* SimpleCollectionViewController.swift in Sources */,
 				93DB552728F79B1F00740087 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
