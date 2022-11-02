@@ -85,10 +85,10 @@ class RxCocoaExampleViewController: UIViewController {
             }
             .disposed(by: disposeBag)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            // 4
-            self.disposeBag = DisposeBag()
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+//            // 4
+//            self.disposeBag = DisposeBag()
+//        }
         
         let itemsA = [3.3, 4.0, 5.0, 2.0, 3.6, 4.8]
         let itemsB = [2.3, 2.0, 1.3]
@@ -156,7 +156,7 @@ class RxCocoaExampleViewController: UIViewController {
             .map { $0.count < 4 }
             .bind(to: loginButton.rx.isEnabled)
             .disposed(by: disposeBag)
-        
+
         loginButton.rx.tap
             .withUnretained(self) // [weak self]
             .subscribe { vc, _ in

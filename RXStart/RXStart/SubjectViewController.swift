@@ -6,8 +6,11 @@
 //
 
 import UIKit
+
+import RxAlamofire
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 class SubjectViewController: UIViewController {
 
@@ -26,48 +29,95 @@ class SubjectViewController: UIViewController {
     let disposebag = DisposeBag()
     let publish = PublishSubject<Int>() // 초기값이 없는 빈 상태
     
-    
+    lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Int>> { dataSource, tableView, indexPath, item in
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        cell.textLabel?.text = "\(item)"
+        return cell
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        testRxAlamofire()
+        behaviorSubject()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ContactCell")
-        viewModel.list
-            .bind(to: tableView.rx.items(cellIdentifier: "ContactCell", cellType: UITableViewCell.self)) {(row, element, cell) in
+        
+        let input = SubjectViewModel.Input(addTap: addButton.rx.tap, resetTap: resetButton.rx.tap, newTap: newButton.rx.tap, searchText: searchBar.rx.text)
+        
+        let output = viewModel.transform(input: input)
+        
+        output.list
+            .drive(tableView.rx.items(cellIdentifier: "ContactCell", cellType: UITableViewCell.self)) {(row, element, cell) in
                 cell.textLabel?.text = "\(element.name): \(element.age)세 (\(element.number))"
             }.disposed(by: disposebag)
-        addButton.rx.tap
+        
+        
+        
+        
+        output.addTap
             .withUnretained(self)
             .subscribe { vc, _ in
                 vc.viewModel.fetchData()
             }.disposed(by: disposebag)
-        resetButton.rx.tap
+        output.resetTap
             .withUnretained(self)
             .subscribe { vc, _ in
                 vc.viewModel.resetData()
             }.disposed(by: disposebag)
-        newButton.rx.tap
+        
+        output.newTap // VC -> VM (Input)
             .withUnretained(self)
             .subscribe { vc, _ in
                 vc.viewModel.newData()
             }.disposed(by: disposebag)
-        searchBar.rx.text.orEmpty
-            .distinctUntilChanged() // 같은 값을 받지 않음
+        
+        output.searchText
             .withUnretained(self)
-            .debounce(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance)
+            
             .subscribe { vc, value in
                 print("====\(value)")
                 vc.viewModel.filterData(query: value)
             }.disposed(by: disposebag)
+        //testRxDataSource()
     }
     
     
 
 }
-
+enum APIKey {
+    static let baseURL = "https://api.unsplash.com"
+    static let searchURL = "https://api.unsplash.com/search/photos?query="
+    static let authorization = "Client-ID 3RpxxEkjeZ3qen3644pICDm5bVCbz9LRCN-KJcdNZtI"
+}
 extension SubjectViewController {
     
-    
-    
+    func testRxAlamofire() {
+        // Success Error => <Single>
+        let url = APIKey.searchURL + "apple"
+        request(.get, url, headers: ["Authorization" : APIKey.authorization])
+            .data()
+            .decode(type: SearchPhoto.self, decoder: JSONDecoder())
+            .subscribe { value in
+                print(#function)
+                print(value.results[0].likes)
+            }.disposed(by: disposebag)
+    }
+    func testRxDataSource() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        dataSource.titleForHeaderInSection = { dataSource, index in
+            return dataSource.sectionModels[index].model
+        }
+        
+        Observable.just([
+            SectionModel(model: "title", items: [1, 2, 3]),
+            SectionModel(model: "title", items: [1, 2, 3]),
+            SectionModel(model: "title", items: [1, 2, 3])
+        ])
+        .bind(to: tableView.rx.items(dataSource: dataSource))
+        .disposed(by: disposebag)
+        
+    }
     func asyncSubject() {
         async.onNext(100)
         async.onNext(200)
@@ -113,6 +163,7 @@ extension SubjectViewController {
         // 구독전에 가장 최근값을 같이 emit
         behavior.onNext(1)
         behavior.onNext(2)
+        behavior.onNext(200)
         behavior
             .subscribe { value in
                 print("behavior - \(value)")
