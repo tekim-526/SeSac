@@ -24,7 +24,7 @@ class SimpleCollectionViewController: UICollectionViewController {
     var list = [
         User(name: "A", age: 13),
                 User(name: "B", age: 2),
-                User(name: "C", age: 33),
+                User(name: "B", age: 2), // UUID때문에 가능함
                 User(name: "D", age: 4)
     ]
     
