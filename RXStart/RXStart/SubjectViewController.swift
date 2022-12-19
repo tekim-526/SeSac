@@ -51,9 +51,6 @@ class SubjectViewController: UIViewController {
                 cell.textLabel?.text = "\(element.name): \(element.age)세 (\(element.number))"
             }.disposed(by: disposebag)
         
-        
-        
-        
         output.addTap
             .withUnretained(self)
             .subscribe { vc, _ in

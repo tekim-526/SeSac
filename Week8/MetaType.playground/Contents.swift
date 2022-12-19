@@ -48,3 +48,10 @@ do {
 } catch {
     print("ERROR")
 }
+
+var components = URLComponents(string: "https://github.com/login/oauth/authorize") // 1
+let clientID = URLQueryItem(name: "client_id", value: "\(clientID)")               // 2
+let scope = URLQueryItem(name: "scope", value: "alal")                         // 2
+components?.queryItems = [clientID, scope]                                         // 3
+
+components?.url // https://github.com/login/oauth/authorize?client_id=\(clientID)&scope=\(scope)

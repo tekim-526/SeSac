@@ -28,12 +28,31 @@ class ViewController: UIViewController {
         User(name: "1234", age: 123),
         User(name: "1234", age: 123),
         User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
+        User(name: "1234", age: 123),
         User(name: "1234", age: 123)
     ]
+    
     var dataSource: UICollectionViewDiffableDataSource<Int, User>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
         collectionView.collectionViewLayout = createLayout()
         configureDataSource()
     }
@@ -62,6 +81,12 @@ class ViewController: UIViewController {
         snapshot.appendItems(list)
         dataSource.apply(snapshot)
         
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            print("indexPath: \(indexPath)")
     }
 }
 

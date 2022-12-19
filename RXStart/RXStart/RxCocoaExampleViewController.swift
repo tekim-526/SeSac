@@ -153,7 +153,7 @@ class RxCocoaExampleViewController: UIViewController {
             .rx
             .text
             .orEmpty
-            .map { $0.count < 4 }
+            .map { $0.count > 4 }
             .bind(to: loginButton.rx.isEnabled)
             .disposed(by: disposeBag)
 
